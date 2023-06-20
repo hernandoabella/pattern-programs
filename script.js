@@ -17,3 +17,35 @@ function darkMode() {
     localStorage.setItem("darkMode", "disabled");
   }
 }
+
+var copyButton = document.querySelector(".copyButton");
+
+copyButton.addEventListener("click", function () {
+  var codeSnippet = document.querySelector(".codeSnippet");
+  var codeText = codeSnippet.textContent;
+
+  navigator.clipboard.writeText(codeText)
+    .then(function () {
+      copyButton.innerHTML = '<i class="fas fa-check"></i> Copiado';
+      setTimeout(function () {
+        copyButton.innerHTML = '<i class="fas fa-copy"></i> Copiar patrón';
+      }, 2000);
+    })
+    .catch(function (err) {
+      console.log("No se pudo copiar el código", err);
+    });
+});
+
+
+var showCodeButton = document.querySelector(".showCodeButton");
+var codigoContainer = document.querySelector(".codigo");
+
+showCodeButton.addEventListener("click", function () {
+  if (codigoContainer.style.display === "none") {
+    codigoContainer.style.display = "block";
+    showCodeButton.textContent = "Ocultar código";
+  } else {
+    codigoContainer.style.display = "none";
+    showCodeButton.textContent = "Mostrar código";
+  }
+});
