@@ -89,7 +89,7 @@ Programas de patrones de asteriscos en JavaScript
 86. Triángulo de asteriscos y números ascendentes en espiral
 87. Triángulo de asteriscos y números descendentes en espiral
 88. Triángulo de asteriscos y letras ascendentes en espiral
-89.Triángulo de asteriscos y letras descendentes en espiral
+89. Triángulo de asteriscos y letras descendentes en espiral
 90. Pirámide invertida con números ascendentes en espiral
 91. Pirámide invertida con números descendentes en espiral
 92. Pirámide invertida con letras ascendentes en espiral
