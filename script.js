@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   hljs.highlightAll();
   var darkMode = localStorage.getItem("darkMode");
 
@@ -24,7 +24,8 @@ copyButton.addEventListener("click", function () {
   var codeSnippet = document.querySelector(".codeSnippet");
   var codeText = codeSnippet.textContent;
 
-  navigator.clipboard.writeText(codeText)
+  navigator.clipboard
+    .writeText(codeText)
     .then(function () {
       copyButton.innerHTML = '<i class="fas fa-check"></i> Copiado';
       setTimeout(function () {
@@ -36,16 +37,15 @@ copyButton.addEventListener("click", function () {
     });
 });
 
-
 var showCodeButton = document.querySelector(".showCodeButton");
 var codigoContainer = document.querySelector(".codigo");
 
 showCodeButton.addEventListener("click", function () {
-  if (codigoContainer.style.display === "none") {
-    codigoContainer.style.display = "block";
-    showCodeButton.textContent = "Ocultar código";
-  } else {
+  if (codigoContainer.style.display === "block") {
     codigoContainer.style.display = "none";
-    showCodeButton.textContent = "Mostrar código";
+    showCodeButton.textContent = `Mostrar código `;
+  } else {
+    codigoContainer.style.display = "block";
+    showCodeButton.textContent = `Ocultar código`;
   }
 });

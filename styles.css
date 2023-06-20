@@ -23,14 +23,19 @@ header {
 
 .card {
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 25px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   border: 1px solid #ccc;
+}
+
+.dark-mode .card {
+  background: #4b4b4b;
 }
 
 h2 {
   text-align: center;
   margin-top: 0;
+  padding: 10px;
 }
 
 a {
@@ -46,6 +51,10 @@ pre {
   white-space: pre;
 }
 
+code {
+  border-radius: 25px;
+}
+
 .card-btns {
   display: flex;
 }
@@ -54,13 +63,25 @@ button {
   display: block;
   margin: 10px auto;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 25px;
+}
+
+.dark-mode button {
+  background: #272822;
+  color: #fff;
 }
 
 .codeSnippet {
   margin: auto auto;
   width: 150px;
   display: block;
+
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.dark-mode .codeSnippet {
+  background: #272822;
 }
 
 .dark-mode {
