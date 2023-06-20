@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+  hljs.highlightAll();
   var darkMode = localStorage.getItem("darkMode");
 
   if (darkMode === "enabled") {
