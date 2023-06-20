@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patrones de asteriscos *</title>
+    <title>Patrones de asteriscos en JavaScript</title>
     <link rel="stylesheet" href="./styles.css" />
     <link
       rel="stylesheet"
@@ -16,7 +16,7 @@
   <body>
     <header>
       <h1>Patrones de asteriscos *</h1>
-      <button onclick="darkMode()">Modo Claro / Oscuro</button>
+      <button onclick="darkMode()"><i class="fas fa-moon"></i></button>
     </header>
     <div class="container">
       <div class="card">
@@ -28,7 +28,14 @@
        *******
       *********</code>
       </pre>
-        <button class="copyButton">Copiar</button>
+        <div class="card-btns">
+          <button class="copyButton">
+            <i class="fas fa-copy"></i> Copiar patrón
+          </button>
+          <button class="showCodeButton">
+            <i class="fas fa-code"></i> Mostrar código
+          </button>
+        </div>
       </div>
       <div class="card">
         <h2>Otro código</h2>
@@ -58,6 +65,12 @@
         <button class="copyButton">Copiar</button>
       </div>
     </div>
+    <footer>
+      <p>
+        Creado con ❤️ por
+        <a href="https://github.com/hernandoabella">Hernando Abella</a>
+      </p>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
