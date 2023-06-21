@@ -18,34 +18,17 @@ function darkMode() {
   }
 }
 
-var copyButton = document.querySelector(".copyButton");
+var showCodeButtons = document.querySelectorAll(".showCodeButton");
 
-copyButton.addEventListener("click", function () {
-  var codeSnippet = document.querySelector(".codeSnippet");
-  var codeText = codeSnippet.textContent;
-
-  navigator.clipboard
-    .writeText(codeText)
-    .then(function () {
-      copyButton.innerHTML = '<i class="fas fa-check"></i> Copiado';
-      setTimeout(function () {
-        copyButton.innerHTML = '<i class="fas fa-copy"></i> Copiar patrón';
-      }, 2000);
-    })
-    .catch(function (err) {
-      console.log("No se pudo copiar el código", err);
-    });
-});
-
-var showCodeButton = document.querySelector(".showCodeButton");
-var codigoContainer = document.querySelector(".codigo");
-
-showCodeButton.addEventListener("click", function () {
-  if (codigoContainer.style.display === "block") {
-    codigoContainer.style.display = "none";
-    showCodeButton.textContent = `Mostrar código `;
-  } else {
-    codigoContainer.style.display = "block";
-    showCodeButton.textContent = `Ocultar código`;
-  }
+showCodeButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    var codigoContainer = button.parentNode.nextElementSibling;
+    if (codigoContainer.style.display === "block") {
+      codigoContainer.style.display = "none";
+      button.textContent = `Mostrar código`;
+    } else {
+      codigoContainer.style.display = "block";
+      button.textContent = `Ocultar código`;
+    }
+  });
 });

@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patrones de asteriscos en JavaScript</title>
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/monokai.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/monokai.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -20,18 +23,23 @@
       <h1>Patrones de asteriscos *</h1>
       <div class="iconos">
         <i class="fas fa-moon" onclick="darkMode()"></i>
-        <a href="https://www.github.com/hernandoabella/patrones-de-asteriscos-en-js" target="_blank"><i class="fab fa-github"></i></a>
+        <a
+          href="https://www.github.com/hernandoabella/patrones-de-asteriscos-en-js"
+          target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
       </div>
     </header>
     <div class="container">
       <div class="card">
         <h2>Triángulo Equilátero</h2>
         <pre class="codeSnippet">
-          *
-         ***
-        *****
-       *******
-      *********</pre>
+    *
+   ***
+  *****
+ *******
+*********</pre
+        >
         <div class="card-btns">
           <button class="copyButton">
             <i class="fas fa-copy"></i> Copiar patrón
@@ -42,7 +50,6 @@
         </div>
         <div class="codigo">
           <pre>
-            <i class="fas fa-copy copyCode"></i>
             <code>
 function imprimirTrianguloEquilatero(filas) {
   // Iterar sobre cada fila del triángulo
@@ -70,6 +77,54 @@ imprimirTrianguloEquilatero(5);
             </code>
           </pre>
         </div>
+      </div>
+      <div class="card">
+        <h2>Triángulo Invertido</h2>
+        <pre class="codeSnippet">
+*********
+ *******
+  *****
+   ***
+    *</pre
+        >
+        <div class="card-btns">
+          <button class="copyButton">
+            <i class="fas fa-copy"></i> Copiar patrón
+          </button>
+          <button class="showCodeButton">
+            <i class="fas fa-code"></i> Mostrar código
+          </button>
+        </div>
+        <div class="codigo">
+          <pre>
+          <code>
+function imprimirTrianguloInvertido(filas) {
+  // Iterar sobre cada fila del triángulo
+  for (let i = filas; i > 0; i--) {
+    let espacios = "";
+    let asteriscos = "";
+
+    // Agregar espacios en blanco antes de los asteriscos
+    for (let j = 0; j < filas - i; j++) {
+      espacios += " ";
+    }
+
+    // Agregar los asteriscos
+    for (let k = 0; k < 2 * i - 1; k++) {
+      asteriscos += "*";
+    }
+
+    // Imprimir la fila
+    console.log(espacios + asteriscos);
+  }
+}
+
+// Llamar a la función e indicar el número de filas que deseas en el triángulo invertido
+imprimirTrianguloInvertido(5);                   
+          </code>
+        </pre>
+        </div>
+      </div>
     </div>
     <footer>
       <p>
