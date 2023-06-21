@@ -18,7 +18,10 @@
   <body>
     <header>
       <h1>Patrones de asteriscos *</h1>
-      <button onclick="darkMode()"><i class="fas fa-moon"></i></button>
+      <div class="iconos">
+        <i class="fas fa-moon" onclick="darkMode()"></i>
+        <a href="https://www.github.com/hernandoabella/patrones-de-asteriscos-en-js" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
     </header>
     <div class="container">
       <div class="card">
@@ -39,30 +42,31 @@
         </div>
         <div class="codigo">
           <pre>
+            <i class="fas fa-copy copyCode"></i>
             <code>
-              function imprimirTrianguloEquilatero(filas) {
-                // Iterar sobre cada fila del triángulo
-                for (let i = 0; i < filas; i++) {
-                  let espacios = "";
-                  let asteriscos = "";
-              
-                  // Agregar espacios en blanco antes de los asteriscos
-                  for (let j = 0; j < filas - i - 1; j++) {
-                    espacios += " ";
-                  }
-              
-                  // Agregar los asteriscos
-                  for (let k = 0; k < 2 * i + 1; k++) {
-                    asteriscos += "*";
-                  }
-              
-                  // Imprimir la fila
-                  console.log(espacios + asteriscos);
-                }
-              }
-              
-              // Llamar a la función e indicar el número de filas que deseas en el triángulo
-              imprimirTrianguloEquilatero(5);
+function imprimirTrianguloEquilatero(filas) {
+  // Iterar sobre cada fila del triángulo
+  for (let i = 0; i < filas; i++) {
+    let espacios = "";
+    let asteriscos = "";
+
+    // Agregar espacios en blanco antes de los asteriscos
+    for (let j = 0; j < filas - i - 1; j++) {
+      espacios += " ";
+    }
+
+    // Agregar los asteriscos
+    for (let k = 0; k < 2 * i + 1; k++) {
+      asteriscos += "*";
+    }
+
+    // Imprimir la fila
+    console.log(espacios + asteriscos);
+  }
+}
+
+// Llamar a la función e indicar el número de filas que deseas en el triángulo
+imprimirTrianguloEquilatero(5);                              
             </code>
           </pre>
         </div>
