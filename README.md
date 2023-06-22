@@ -1,4 +1,5 @@
 # Patrones de asteriscos
+
 Programas de patrones de asteriscos en JavaScript
 
 ## Lista de patrones 🥳
@@ -6,8 +7,8 @@ Programas de patrones de asteriscos en JavaScript
 1. [Triángulo Equilatero](patrones/triangulo-equilatero.md)
 2. [Triángulo invertido](patrones/triangulo-invertido.md)
 3. [Triángulo hueco](patrones/triangulo-hueco.md)
-4. [Triángulo hueco invertido]
-5. [Triángulo con borde]
+4. [Triángulo hueco invertido](/patrones/triangulo-hueco-invertido.md)
+5. [Triángulo con borde](/patrones/triangulo-con-borde.md)
 6. [Pirámide]
 7. [Pirámide invertida]
 8. [Rombo]
