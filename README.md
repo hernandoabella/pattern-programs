@@ -11,7 +11,7 @@ Programas de patrones de asteriscos en JavaScript
 5. [Triángulo con borde](/patrones/triangulo-con-borde.md)
 6. [Pirámide](/patrones/piramide.md)
 7. [Pirámide invertida](/patrones/piramide-invertida.md)
-8. [Rombo]
+8. [Rombo](/patrones/rombo.md)
 9. [Rombo hueco]
 10. [Rombo con borde]
 11. [Escalera ascendente]
