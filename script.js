@@ -90,3 +90,5 @@ codeSnippets.forEach(function (snippet) {
     alert("¡Patrón copiado!");
   });
 });
+
+
