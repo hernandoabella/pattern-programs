@@ -30,7 +30,7 @@ header {
   border-radius: 25px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   border: 1px solid #ccc;
-  width: 300px;
+  width: 320px;
 }
 
 .dark-mode .card {
@@ -50,8 +50,8 @@ header {
 
 h2 {
   text-align: center;
-  margin-top: 0;
   padding: 10px;
+  margin-bottom: 20px;
 }
 
 a {
