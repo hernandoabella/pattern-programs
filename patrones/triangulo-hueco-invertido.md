@@ -1,6 +1,4 @@
-
-
-## Triángulo hueco
+## Triángulo hueco invertido
 
 
 ### Código: 
