@@ -32,7 +32,8 @@ header {
 .card {
   padding: 20px;
   border-radius: 25px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   border: 1px solid #ccc;
   width: 100%;
   transition: 0.3s;
@@ -45,12 +46,8 @@ header {
 .iconos i {
   font-size: 20px;
   padding: 10px;
-  color: #0d8d9e;
+  color: #cb6ce6;
   cursor: pointer;
-}
-
-.dark-mode .iconos i {
-  color: #3ee5ff;
 }
 
 h2 {
@@ -60,11 +57,7 @@ h2 {
 }
 
 a {
-  color: #0d8d9e;
-}
-
-.dark-mode a {
-  color: #3ee5ff;
+  color: #cb6ce6;
 }
 
 pre {
@@ -124,8 +117,7 @@ button {
 }
 
 .copyButton {
-  background: #333;
-  color: #fff;
+  background: #cb6ce6;
 }
 
 .showCodeButton {
