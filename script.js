@@ -92,3 +92,34 @@ codeSnippets.forEach(function (snippet) {
 });
 
 
+// Obtener todos los elementos con la clase 'copyButton'
+const copyButtons = document.querySelectorAll('.copyButton');
+
+// Iterar sobre cada botón de copiar
+copyButtons.forEach((button) => {
+  // Agregar un evento 'click' a cada botón
+  button.addEventListener('click', () => {
+    // Obtener el elemento de código asociado al botón actual
+    const codeElement = button.parentNode.nextElementSibling.querySelector('code');
+
+    // Crear un área de texto temporal
+    const tempTextarea = document.createElement('textarea');
+    tempTextarea.value = codeElement.textContent;
+    document.body.appendChild(tempTextarea);
+
+    // Seleccionar y copiar el contenido del área de texto
+    tempTextarea.select();
+    document.execCommand('copy');
+
+    // Eliminar el área de texto temporal
+    document.body.removeChild(tempTextarea);
+
+    // Cambiar el texto del botón al copiarse
+    button.innerHTML = '<i class="fas fa-check"></i> Copiado';
+
+    // Restaurar el texto del botón después de 2 segundos
+    setTimeout(() => {
+      button.innerHTML = '<i class="fas fa-copy"></i> Copiar código';
+    }, 2000);
+  });
+});

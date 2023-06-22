@@ -31,10 +31,8 @@ header {
 
 .card {
   padding: 20px;
-  border-radius: 25px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  border: 1px solid #ccc;
   width: 100%;
   position: relative;
 }
@@ -67,12 +65,13 @@ pre {
 }
 
 code {
-  border-radius: 15px;
+  height: 329px;
 }
 
 .card-btns {
   display: flex;
-  margin-top: 20px;
+  justify-content: space-around;
+  margin-top: 30px;
 }
 
 .codeSnippet {
@@ -103,15 +102,19 @@ code {
 .codigo {
   display: none;
   position: absolute;
-  left: 20px;
+  left: 0px;
+  width: 100%;
+}
+
+button {
+  border: none;
+  outline: none;
 }
 
 .copyButton {
-  background: #b353cd;
+  background: #b553d0;
   color: #fff;
-  position: absolute;
-  top: 5px;
-  right: 5px;
+  padding: 10px;
 }
 
 .copyButton:hover {
@@ -121,6 +124,7 @@ code {
 .showCodeButton {
   background: #333;
   color: #fff;
+  padding: 10px;
 }
 
 .showCodeButton:hover {
