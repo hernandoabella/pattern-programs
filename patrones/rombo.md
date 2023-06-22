@@ -1,4 +1,4 @@
-## Triángulo hueco
+## Rombo
 
 ### Código: 
 ```
