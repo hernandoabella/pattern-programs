@@ -96,6 +96,7 @@ button {
   border-radius: 15px;
   padding: 20px;
   font-size: 20px;
+  color: #2ecc71;
 }
 
 .dark-mode .codeSnippet {
@@ -109,6 +110,8 @@ button {
 
 .codigo {
   display: none;
+  position: absolute;
+  width: 300px;
 }
 
 .copyCode {
@@ -120,10 +123,10 @@ button {
 
 .copyButton {
   background: #2ecc71;
+  color: #333;
 }
 
 .showCodeButton {
-  
 }
 
 footer {
