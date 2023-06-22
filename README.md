@@ -9,7 +9,7 @@ Programas de patrones de asteriscos en JavaScript
 3. [Triángulo hueco](patrones/triangulo-hueco.md)
 4. [Triángulo hueco invertido](/patrones/triangulo-hueco-invertido.md)
 5. [Triángulo con borde](/patrones/triangulo-con-borde.md)
-6. [Pirámide]
+6. [Pirámide](/patrones/piramide.md)
 7. [Pirámide invertida]
 8. [Rombo]
 9. [Rombo hueco]
