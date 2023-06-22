@@ -36,7 +36,6 @@ header {
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   border: 1px solid #ccc;
   width: 100%;
-  transition: 0.3s;
 }
 
 .dark-mode .card {
@@ -85,12 +84,18 @@ button {
 }
 
 .codeSnippet {
+  background: #DEDEDE;
   margin: auto auto;
   width: 138px;
   display: block;
   border-radius: 15px;
   padding: 20px;
   font-size: 20px;
+  cursor: pointer;
+}
+
+.codeSnippet:active {
+  transform: scale(0.95);
 }
 
 .dark-mode .codeSnippet {
@@ -120,6 +125,11 @@ button {
 
 .copyButton:hover {
   opacity: 0.8;
+}
+
+.copyCodeButton {
+  background: #b353cd;
+  color: #fff;
 }
 
 .showCodeButton {
