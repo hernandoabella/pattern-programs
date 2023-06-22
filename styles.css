@@ -80,11 +80,13 @@ button {
   padding: 10px;
   border-radius: 15px;
   cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.1s;
 }
 
-.dark-mode button {
-  background: #272822;
-  color: #fff;
+button:hover {
+  transform: scale(1.1);
 }
 
 .codeSnippet {
@@ -117,7 +119,8 @@ button {
 }
 
 .copyButton {
-  background: #cb6ce6;
+  background: #b353cd;
+  color: #fff;
 }
 
 .showCodeButton {
