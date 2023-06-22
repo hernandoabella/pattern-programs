@@ -1,10 +1,12 @@
+
+
 ## Triángulo hueco
 
+
 ### Código: 
-```
-function imprimirTrianguloHueco(filas) {
+function imprimirTrianguloHuecoInvertido(filas) {
   // Iterar sobre cada fila del triángulo
-  for (let i = 1; i <= filas; i++) {
+  for (let i = filas; i >= 1; i--) {
     let espacios = "";
     let asteriscos = "";
 
@@ -14,13 +16,13 @@ function imprimirTrianguloHueco(filas) {
     }
 
     // Construir la cadena de asteriscos
-    if (i === 1 || i === filas) {
-      for (let k = 0; k < i * 2 - 1; k++) {
+    if (i === filas || i === 1) {
+      for (let k = 0; k < 2 * i - 1; k++) {
         asteriscos += "*";
       }
     } else {
       asteriscos += "*";
-      for (let k = 0; k < (i - 2) * 2 + 1; k++) {
+      for (let k = 0; k < 2 * i - 3; k++) {
         asteriscos += " ";
       }
       asteriscos += "*";
@@ -30,14 +32,17 @@ function imprimirTrianguloHueco(filas) {
     console.log(espacios + asteriscos);
   }
 }
+
+
+imprimirTrianguloHuecoInvertido(5);
 ```
 
 ### Resultado:
 
 ```
-    *
-   * *
-  *   *
- *     *
 *********
+ *     *
+  *   *
+   * *
+    *
 ```
