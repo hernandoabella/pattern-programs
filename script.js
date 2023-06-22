@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (darkMode === "enabled") {
     document.body.classList.add("dark-mode");
+    cambiarLogo("logo-dark.png");
   }
 });
 
@@ -13,9 +14,16 @@ function darkMode() {
 
   if (element.classList.contains("dark-mode")) {
     localStorage.setItem("darkMode", "enabled");
+    cambiarLogo("logo-dark.png");
   } else {
     localStorage.setItem("darkMode", "disabled");
+    cambiarLogo("logo-light.png");
   }
+}
+
+function cambiarLogo(nombreLogo) {
+  var logo = document.querySelector("header img");
+  logo.src = "./images/" + nombreLogo;
 }
 
 var showCodeButtons = document.querySelectorAll(".showCodeButton");

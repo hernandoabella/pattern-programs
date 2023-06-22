@@ -30,7 +30,7 @@ header {
   border-radius: 25px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   border: 1px solid #ccc;
-  width: 320px;
+  width: 100%;
 }
 
 .dark-mode .card {
@@ -111,7 +111,10 @@ button {
 .codigo {
   display: none;
   position: absolute;
-  width: 300px;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
 .copyCode {
