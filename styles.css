@@ -31,6 +31,7 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   border: 1px solid #ccc;
   width: 100%;
+  transition: 0.3s;
 }
 
 .dark-mode .card {
@@ -96,7 +97,6 @@ button {
   border-radius: 15px;
   padding: 20px;
   font-size: 20px;
-  color: #2ecc71;
 }
 
 .dark-mode .codeSnippet {
@@ -110,11 +110,6 @@ button {
 
 .codigo {
   display: none;
-  position: absolute;
-  width: 90%;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
 }
 
 .copyCode {
@@ -125,16 +120,38 @@ button {
 }
 
 .copyButton {
-  background: #2ecc71;
-  color: #333;
+  background: #333;
+  color: #fff;
 }
 
 .showCodeButton {
+  background: #333;
+  color: #fff;
 }
 
 footer {
   padding: 20px;
   text-align: center;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
 }
 
 @media screen and (max-width: 767px) {
