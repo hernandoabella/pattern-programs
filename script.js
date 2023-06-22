@@ -63,19 +63,18 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-// Obtener todos los botones de copiar
-var copyButtons = document.querySelectorAll(".copyButton");
+// Obtener todos los codeSnippets
+var codeSnippets = document.querySelectorAll(".codeSnippet");
 
-// Agregar evento de clic a cada botón
-copyButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    // Encontrar el codeSnippet de la tarjeta actual
-    var codeSnippet =
-      this.parentNode.parentNode.querySelector(".codeSnippet").innerHTML;
+// Agregar evento de clic a cada codeSnippet
+codeSnippets.forEach(function (snippet) {
+  snippet.addEventListener("click", function () {
+    // Obtener el código del codeSnippet actual
+    var code = this.innerHTML;
 
     // Crear un elemento de textarea temporal
     var tempTextarea = document.createElement("textarea");
-    tempTextarea.value = codeSnippet;
+    tempTextarea.value = code;
     document.body.appendChild(tempTextarea);
 
     // Seleccionar el contenido del textarea temporal
@@ -88,7 +87,6 @@ copyButtons.forEach(function (button) {
     // Eliminar el textarea temporal
     document.body.removeChild(tempTextarea);
 
-    // Alertar que se ha copiado el texto
-    alert("¡Patrón copiado al portapapeles!");
+    alert("El patrón se ha copiado correctamente");
   });
 });
