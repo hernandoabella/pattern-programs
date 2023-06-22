@@ -101,6 +101,7 @@ code {
 
 .codigo {
   display: none;
+  position: absolute;
 }
 
 .copyButton {
