@@ -30,6 +30,8 @@ function imprimirTrianguloHueco(filas) {
     console.log(espacios + asteriscos);
   }
 }
+
+imprimirTrianguloHueco(5); 
 ```
 
 ### Resultado:
