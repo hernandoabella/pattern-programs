@@ -118,6 +118,14 @@ button {
   cursor: pointer;
 }
 
+.copyButton {
+  background: #2ecc71;
+}
+
+.showCodeButton {
+  
+}
+
 footer {
   padding: 20px;
   text-align: center;
