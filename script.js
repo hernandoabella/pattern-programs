@@ -45,7 +45,9 @@ showCodeButtons.forEach(function (button) {
 let mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -60,3 +62,33 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// Obtener todos los botones de copiar
+var copyButtons = document.querySelectorAll(".copyButton");
+
+// Agregar evento de clic a cada botón
+copyButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    // Encontrar el codeSnippet de la tarjeta actual
+    var codeSnippet =
+      this.parentNode.parentNode.querySelector(".codeSnippet").innerHTML;
+
+    // Crear un elemento de textarea temporal
+    var tempTextarea = document.createElement("textarea");
+    tempTextarea.value = codeSnippet;
+    document.body.appendChild(tempTextarea);
+
+    // Seleccionar el contenido del textarea temporal
+    tempTextarea.select();
+    tempTextarea.setSelectionRange(0, 99999); // Para dispositivos móviles
+
+    // Copiar el contenido del textarea al portapapeles
+    document.execCommand("copy");
+
+    // Eliminar el textarea temporal
+    document.body.removeChild(tempTextarea);
+
+    // Alertar que se ha copiado el texto
+    alert("¡Patrón copiado al portapapeles!");
+  });
+});

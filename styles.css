@@ -82,11 +82,6 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
-  transition: 0.1s;
-}
-
-button:hover {
-  transform: scale(1.1);
 }
 
 .codeSnippet {
@@ -123,9 +118,17 @@ button:hover {
   color: #fff;
 }
 
+.copyButton:hover {
+  opacity: 0.8;
+}
+
 .showCodeButton {
   background: #333;
   color: #fff;
+}
+
+.showCodeButton:hover {
+  opacity: 0.8;
 }
 
 footer {
