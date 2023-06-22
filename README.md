@@ -12,7 +12,7 @@ Programas de patrones de asteriscos en JavaScript
 6. [Pirámide](/patrones/piramide.md)
 7. [Pirámide invertida](/patrones/piramide-invertida.md)
 8. [Rombo](/patrones/rombo.md)
-9. [Rombo hueco]
+9. [Rombo hueco](/patrones/rombo-hueco.md)
 10. [Rombo con borde]
 11. [Escalera ascendente]
 12. [Escalera descendente]
