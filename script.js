@@ -33,10 +33,10 @@ showCodeButtons.forEach(function (button) {
     var codigoContainer = button.parentNode.nextElementSibling;
     if (codigoContainer.style.display === "block") {
       codigoContainer.style.display = "none";
-      button.textContent = `Mostrar código`;
+      button.innerHTML = '<i class="fas fa-code"></i> Mostrar código';
     } else {
       codigoContainer.style.display = "block";
-      button.textContent = `Ocultar código`;
+      button.innerHTML = '<i class="fas fa-code"></i> Ocultar código';
     }
   });
 });
@@ -91,25 +91,25 @@ codeSnippets.forEach(function (snippet) {
   });
 });
 
-
 // Obtener todos los elementos con la clase 'copyButton'
-const copyButtons = document.querySelectorAll('.copyButton');
+const copyButtons = document.querySelectorAll(".copyButton");
 
 // Iterar sobre cada botón de copiar
 copyButtons.forEach((button) => {
   // Agregar un evento 'click' a cada botón
-  button.addEventListener('click', () => {
+  button.addEventListener("click", () => {
     // Obtener el elemento de código asociado al botón actual
-    const codeElement = button.parentNode.nextElementSibling.querySelector('code');
+    const codeElement =
+      button.parentNode.nextElementSibling.querySelector("code");
 
     // Crear un área de texto temporal
-    const tempTextarea = document.createElement('textarea');
+    const tempTextarea = document.createElement("textarea");
     tempTextarea.value = codeElement.textContent;
     document.body.appendChild(tempTextarea);
 
     // Seleccionar y copiar el contenido del área de texto
     tempTextarea.select();
-    document.execCommand('copy');
+    document.execCommand("copy");
 
     // Eliminar el área de texto temporal
     document.body.removeChild(tempTextarea);
