@@ -35,6 +35,21 @@ header {
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   width: 100%;
   position: relative;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: #E68CFF !important;
+  border-radius: 100% 50% 20% 10%;
+  z-index: 1;
+  transform: skew(-5deg, -5deg);
+}
+
+.dark-mode .card:hover {
+  background: #9540AC !important;
+  border-radius: 100% 50% 20% 10%;
+  z-index: 1;
+  transform: skew(-5deg, -5deg);
 }
 
 .dark-mode .card {
