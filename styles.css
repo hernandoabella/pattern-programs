@@ -77,6 +77,11 @@ pre {
   font-family: monospace;
   white-space: pre;
   position: relative;
+  transition: .3s;
+}
+
+pre:hover {
+  transform: scale(.9);
 }
 
 code {
