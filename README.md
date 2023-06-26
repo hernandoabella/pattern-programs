@@ -1,6 +1,6 @@
-<div align="center"><img title="a title" alt="Alt text" src="/images/logo-light.png"></div>
+<div align="center"><img title="logo" alt="logo" src="/images/logo-light.png"></div>
 
-Programas de patrones de asteriscos en JavaScript
+<p align="center">Programas de patrones de asteriscos en JavaScript</p>
 
 ## Lista de patrones ⬇️
 
