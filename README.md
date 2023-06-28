@@ -13,7 +13,6 @@
 7. [Pirámide invertida](/patrones/piramide-invertida.md)
 8. [Rombo](/patrones/rombo.md)
 9. [Rombo hueco](/patrones/rombo-hueco.md)
-<<<<<<< HEAD
 10. [Rombo con borde]()
 11. [Escalera ascendente](/patrones/escalera-ascendente.md)
 12. [Escalera descendente](/patrones/escalera-descendente)
