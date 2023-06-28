@@ -18,10 +18,6 @@ header {
   padding: 20px;
 }
 
-.logo {
-  user-select: none;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -80,10 +76,6 @@ pre {
   transition: .3s;
 }
 
-pre:hover {
-  transform: scale(.9);
-}
-
 code {
   height: 370px;
 }
@@ -103,11 +95,10 @@ code {
   padding: 20px;
   font-size: 20px;
   cursor: pointer;
-  user-select: none;
 }
 
 .codeSnippet:active {
-  transform: scale(0.99);
+  transform: scale(0.9);
 }
 
 .dark-mode .codeSnippet {
