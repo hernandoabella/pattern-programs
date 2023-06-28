@@ -10,7 +10,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/monokai.min.css"
     />
-    
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css"
+    />    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
   </head>
   <body>
@@ -178,6 +193,60 @@ imprimirTrianguloHueco(5);
       </div>
       <div class="card">
         <h2>Triángulo Hueco Invertido</h2>
+        <pre class="codeSnippet">
+*********
+ *     *
+  *   *
+   * *
+    *</pre>
+        <div class="card-btns">
+          <button class="copyButton">
+            <i class="fas fa-copy"></i> Copiar código
+          </button>
+
+          <button class="showCodeButton">
+            <i class="fas fa-code"></i> Mostrar código
+          </button>
+        </div>
+        <div class="codigo">
+          <pre>
+            <code>
+function imprimirTrianguloHueco(filas) {
+  // Iterar sobre cada fila del triángulo
+  for (let i = 1; i <= filas; i++) {
+    let espacios = "";
+    let asteriscos = "";
+
+    // Agregar espacios en blanco antes de los asteriscos
+    for (let j = 0; j < filas - i; j++) {
+      espacios += " ";
+    }
+
+    // Construir la cadena de asteriscos
+    if (i === 1 || i === filas) {
+      for (let k = 0; k < i * 2 - 1; k++) {
+        asteriscos += "*";
+      }
+    } else {
+      asteriscos += "*";
+      for (let k = 0; k < (i - 2) * 2 + 1; k++) {
+        asteriscos += " ";
+      }
+      asteriscos += "*";
+    }
+
+    // Imprimir la fila
+    console.log(espacios + asteriscos);
+  }
+}
+
+imprimirTrianguloHueco(5);               
+            </code>
+          </pre>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Triángulo con borde</h2>
         <pre class="codeSnippet">
 *********
  *     *
