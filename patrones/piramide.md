@@ -1,4 +1,4 @@
-## Triángulo equilátero
+## Piramide Simple
 
 ### Código:
 
