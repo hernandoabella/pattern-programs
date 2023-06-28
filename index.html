@@ -265,36 +265,40 @@ imprimirTrianguloHueco(5);
         <div class="codigo">
           <pre>
             <code>
-function imprimirTrianguloHueco(filas) {
-  // Iterar sobre cada fila del triángulo
-  for (let i = 1; i <= filas; i++) {
-    let espacios = "";
-    let asteriscos = "";
-
-    // Agregar espacios en blanco antes de los asteriscos
-    for (let j = 0; j < filas - i; j++) {
-      espacios += " ";
-    }
-
-    // Construir la cadena de asteriscos
-    if (i === 1 || i === filas) {
-      for (let k = 0; k < i * 2 - 1; k++) {
-        asteriscos += "*";
-      }
-    } else {
-      asteriscos += "*";
-      for (let k = 0; k < (i - 2) * 2 + 1; k++) {
-        asteriscos += " ";
-      }
-      asteriscos += "*";
-    }
-
-    // Imprimir la fila
-    console.log(espacios + asteriscos);
+function imprimirTrianguloConBorde(filas) {
+  // Imprimir la primera línea con asterisco completo
+  let linea = "";
+  for (let i = 0; i < 2 * filas - 1; i++) {
+    linea += "*";
   }
+  console.log(linea);
+
+  // Imprimir las filas del triángulo invertido
+  for (let i = filas - 2; i >= 1; i--) {
+    linea = "*"; // Iniciar la línea con asterisco
+
+    // Construir el contenido de la línea
+    for (let j = 1; j < 2 * filas - 2; j++) {
+      if (j === i || j === 2 * filas - 2 - i) {
+        linea += " "; // Agregar espacio en blanco en los bordes
+      } else {
+        linea += "*"; // Agregar asterisco en el interior
+      }
+    }
+
+    linea += "*"; // Agregar asterisco al final de la línea
+    console.log(linea);
+  }
+
+  // Imprimir la última línea con asterisco completo
+  linea = "";
+  for (let i = 0; i < 2 * filas - 1; i++) {
+    linea += "*";
+  }
+  console.log(linea);
 }
 
-imprimirTrianguloHueco(5);               
+imprimirTrianguloConBorde(5);             
             </code>
           </pre>
         </div>
