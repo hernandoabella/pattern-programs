@@ -9,7 +9,7 @@
 3. [Triángulo hueco](patrones/triangulo-hueco.md)
 4. [Triángulo hueco invertido](/patrones/triangulo-hueco-invertido.md)
 5. [Triángulo con borde](/patrones/triangulo-con-borde.md)
-6. [Pirámide](/patrones/piramide.md)
+6. [Pirámide simple](/patrones/piramide.md)
 7. [Pirámide invertida](/patrones/piramide-invertida.md)
 8. [Rombo](/patrones/rombo.md)
 9. [Rombo hueco](/patrones/rombo-hueco.md)
