@@ -25,7 +25,7 @@
     <link
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css"
-    />    
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
   </head>
   <body>
@@ -34,7 +34,7 @@
       <div class="iconos">
         <i class="fas fa-moon" onclick="darkMode()"></i>
         <a
-          rel="noopener" 
+          rel="noopener"
           title="Github"
           href="https://www.github.com/hernandoabella/patrones-de-asteriscos-en-js"
           target="_blank"
@@ -50,7 +50,8 @@
    ***
   *****
  *******
-*********</pre>
+*********</pre
+        >
         <div class="card-btns">
           <button class="copyButton">
             <i class="fas fa-copy"></i> Copiar código
@@ -144,7 +145,8 @@ imprimirTrianguloInvertido(5);
    * *
   *   *
  *     *
-*********</pre>
+*********</pre
+        >
         <div class="card-btns">
           <button class="copyButton">
             <i class="fas fa-copy"></i> Copiar código
@@ -198,7 +200,8 @@ imprimirTrianguloHueco(5);
  *     *
   *   *
    * *
-    *</pre>
+    *</pre
+        >
         <div class="card-btns">
           <button class="copyButton">
             <i class="fas fa-copy"></i> Copiar código
@@ -252,7 +255,8 @@ imprimirTrianguloHueco(5);
 *** * ***
 ** *** **
 * ***** *
-*********</pre>
+*********</pre
+        >
         <div class="card-btns">
           <button class="copyButton">
             <i class="fas fa-copy"></i> Copiar código
@@ -303,6 +307,89 @@ imprimirTrianguloConBorde(5);
           </pre>
         </div>
       </div>
+      <div class="card">
+        <h2>Piramide simple</h2>
+        <pre class="codeSnippet">
+*
+***
+*****
+*******
+*********</pre
+        >
+        <div class="card-btns">
+          <button class="copyButton">
+            <i class="fas fa-copy"></i> Copiar código
+          </button>
+
+          <button class="showCodeButton">
+            <i class="fas fa-code"></i> Mostrar código
+          </button>
+        </div>
+        <div class="codigo">
+          <pre>
+            <code>
+function imprimirPiramide(filas) {
+  // Iterar sobre cada fila de la pirámide
+  for (let i = 1; i <= filas; i++) {
+    let linea = "";
+
+    // Agregar los asteriscos
+    for (let j = 1; j <= 2 * i - 1; j++) {
+      linea += "*";
+    }
+
+    // Imprimir la fila
+    console.log(linea);
+  }
+}
+
+// Llamar a la función e indicar el número de filas para la pirámide
+imprimirPiramide(5);            
+            </code>
+          </pre>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Piramide invertida</h2>
+        <pre class="codeSnippet">
+*********
+*******
+*****
+***
+*</pre>
+        <div class="card-btns">
+          <button class="copyButton">
+            <i class="fas fa-copy"></i> Copiar código
+          </button>
+
+          <button class="showCodeButton">
+            <i class="fas fa-code"></i> Mostrar código
+          </button>
+        </div>
+        <div class="codigo">
+          <pre>
+            <code>
+function imprimirPiramideInvertida(filas) {
+  // Iterar sobre cada fila de la pirámide invertida
+  for (let i = filas; i >= 1; i--) {
+    let linea = "";
+
+    // Agregar los asteriscos
+    for (let j = 1; j <= 2 * i - 1; j++) {
+      linea += "*";
+    }
+
+    // Imprimir la fila
+    console.log(linea);
+  }
+}
+
+// Llamar a la función e indicar el número de filas para la pirámide invertida
+imprimirPiramideInvertida(5);            
+            </code>
+          </pre>
+        </div>
+      </div>
     </div>
     <footer>
       <p>
@@ -310,7 +397,9 @@ imprimirTrianguloConBorde(5);
         <a href="https://github.com/hernandoabella">Hernando Abella</a>
       </p>
     </footer>
-    <button onclick="topFunction()" id="myBtn" title="Ir arriba"><i class="fa-solid fa-arrow-up"></i></button>
+    <button onclick="topFunction()" id="myBtn" title="Ir arriba">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <script src="./script.js"></script>
   </body>
 </html>
