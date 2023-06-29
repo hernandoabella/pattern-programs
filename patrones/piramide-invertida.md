@@ -1,4 +1,4 @@
-## Triángulo invertido
+## Piramide invertida
 
 ### Código:
 
