@@ -122,5 +122,20 @@ copyButtons.forEach((button) => {
       button.innerHTML = '<i class="fas fa-copy"></i> Copy code';
     }, 2000);
   });
+
   
+
 });
+
+// Muestra u oculta el cuadro de diálogo al hacer clic en el icono
+document.getElementById("language-selector").addEventListener("click", function () {
+  var dialog = document.getElementById("languageDialog");
+  dialog.style.display = dialog.style.display === "block" ? "none" : "block";
+});
+
+// Redirige a la ruta seleccionada en el cuadro de diálogo
+function navigateToLanguage(selectedValue) {
+  if (selectedValue) {
+    window.location.href = selectedValue;
+  }
+}
