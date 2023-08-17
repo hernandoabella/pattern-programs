@@ -30,7 +30,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
   </head>
   <body>
-
     <!-- header -->
 
     <header>
@@ -44,25 +43,35 @@
           target="_blank"
           ><i class="fab fa-github"></i
         ></a>
-      </div>
-      <select onchange="navigateToLanguage(this)">
-        <option value="">Select a language</option>
-        <option value="/">Root Site</option>
-        <option value="/es">Spanish</option>
-      </select>
-    </header>
-     <!-- header -->
+        <!-- Agrega un enlace para cambiar el idioma -->
+        <a id="language-selector" href="#">
+          <i class="fas fa-globe"></i>
+        </a>
 
-     <!-- container -->
+        <!-- Agrega el cuadro de diálogo -->
+        <div class="language-dialog" id="languageDialog">
+          <div class="language-option" onclick="navigateToLanguage('/')">
+            English
+          </div>
+          <div class="language-option" onclick="navigateToLanguage('/es')">
+            Español
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header -->
+
+    <!-- container -->
     <div class="container">
       <div class="card">
         <h2>Equilateral Triangle</h2>
-          <pre class="codeSnippet">
+        <pre class="codeSnippet">
     *
    ***
   *****
  *******
-*********</pre>
+*********</pre
+        >
 
         <div class="card-btns">
           <button class="copyButton">
@@ -105,7 +114,8 @@ imprimirTrianguloEquilatero(5);
       </div>
       <div class="card">
         <h2>Inverted Triangle</h2>
-        <pre class="codeSnippet">*********
+        <pre class="codeSnippet">
+*********
  *******
   *****
    ***
