@@ -30,6 +30,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
   </head>
   <body>
+
+    <!-- header -->
+
     <header>
       <h1><img class="logo" src="./images/logo-light.png" alt="logo" /></h1>
       <div class="iconos">
@@ -42,7 +45,15 @@
           ><i class="fab fa-github"></i
         ></a>
       </div>
+      <select onchange="navigateToLanguage(this)">
+        <option value="">Select a language</option>
+        <option value="/">Root Site</option>
+        <option value="/es">Spanish</option>
+      </select>
     </header>
+     <!-- header -->
+
+     <!-- container -->
     <div class="container">
       <div class="card">
         <h2>Equilateral Triangle</h2>
@@ -392,12 +403,16 @@ imprimirPiramideInvertida(5);
         </div>
       </div>
     </div>
+    <!-- container -->
+
+    <!-- footer -->
     <footer>
       <p>
         Creado con ❤️ por
         <a href="https://github.com/hernandoabella">Hernando Abella</a>
       </p>
     </footer>
+    <!-- footer -->
     <button onclick="topFunction()" id="myBtn" title="Ir arriba">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
