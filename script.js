@@ -122,4 +122,5 @@ copyButtons.forEach((button) => {
       button.innerHTML = '<i class="fas fa-copy"></i> Copiar código';
     }, 2000);
   });
+  
 });
