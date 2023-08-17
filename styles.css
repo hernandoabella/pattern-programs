@@ -31,22 +31,21 @@ header {
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   width: 100%;
   position: relative;
-  transition: 0.3s;
   border-radius: 12px;
 }
 
 .card:hover {
   background: #e68cff !important;
-  border-radius: 100% 50% 20% 10%;
+  border-radius: 20% 10% 20% 10%;
   z-index: 1;
-  transform: skew(-5deg, -5deg);
+  transform: skew(-2deg, -2deg);
 }
 
 .dark-mode .card:hover {
   background: #9540ac !important;
   border-radius: 100% 50% 20% 10%;
   z-index: 1;
-  transform: skew(-5deg, -5deg);
+  transform: skew(-3deg, -3deg);
 }
 
 .dark-mode .card {
@@ -74,7 +73,6 @@ pre {
   font-family: monospace;
   white-space: pre;
   position: relative;
-  transition: 0.3s;
 }
 
 code {
@@ -162,7 +160,7 @@ footer {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: #b553d0;
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -173,10 +171,6 @@ footer {
   background-color: #555;
 }
 
-.tooltip-container {
-  position: relative;
-}
-
 .codeSnippet {
   font-family: monospace;
   background-color: #f5f5f5;
@@ -184,13 +178,17 @@ footer {
   position: relative;
 }
 
+.dark-mode .codeSnippet::before {
+  background-color: #b553d0;
+  color: #fff;
+}
+
 .codeSnippet::before {
   content: "Copy pattern";
   display: none;
   position: absolute;
-  top: 50px;
-  left: 60%;
-  transform: translateX(-50%);
+  top: 60px;
+  left: 0;
   background-color: #333;
   color: #fff;
   padding: 5px;
@@ -199,7 +197,7 @@ footer {
 
 .codeSnippet:hover::before {
   display: block;
-  transform: rotate(-90deg);
+  transform: rotate(-45deg);
 }
 
 @media screen and (max-width: 768px) {
