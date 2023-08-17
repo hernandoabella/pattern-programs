@@ -115,11 +115,11 @@ copyButtons.forEach((button) => {
     document.body.removeChild(tempTextarea);
 
     // Cambiar el texto del botón al copiarse
-    button.innerHTML = '<i class="fas fa-check"></i> Copiado';
+    button.innerHTML = '<i class="fas fa-check"></i> Copied';
 
     // Restaurar el texto del botón después de 2 segundos
     setTimeout(() => {
-      button.innerHTML = '<i class="fas fa-copy"></i> Copiar código';
+      button.innerHTML = '<i class="fas fa-copy"></i> Copy code';
     }, 2000);
   });
   
