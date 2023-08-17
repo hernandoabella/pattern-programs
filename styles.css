@@ -79,6 +79,28 @@ code {
   height: 370px;
 }
 
+/* Agrega estilos para el cuadro de diálogo */
+.language-dialog {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  display: none;
+  width: 150px;
+}
+
+/* Estilos para las opciones */
+.language-option {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.language-option:hover {
+  background-color: #f0f0f0;
+}
+
 .card-btns {
   display: flex;
   justify-content: space-around;
