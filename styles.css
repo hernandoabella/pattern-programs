@@ -173,6 +173,35 @@ footer {
   background-color: #555;
 }
 
+.tooltip-container {
+  position: relative;
+}
+
+.codeSnippet {
+  font-family: monospace;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.codeSnippet::before {
+  content: "Copy pattern";
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 60%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.codeSnippet:hover::before {
+  display: block;
+  transform: rotate(-90deg);
+}
+
 @media screen and (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
