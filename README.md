@@ -104,27 +104,22 @@
 98. [Rombo con bordes y números ascendentes en espiral]()
 99. [Rombo con bordes y números descendentes en espiral]()
 100. [Rombo con bordes y letras ascendentes en espiral]()
-## Contribución
 
-¡Gracias por considerar contribuir a los programas de patrones de asteriscos en JavaScript! Si te gustaría agregar nuevos patrones, mejorar los existentes o corregir algún error, tu ayuda es bienvenida.
+## Contribution
+Thank you for considering contributing to the asterisk patterns programs in JavaScript! If you would like to add new patterns, improve existing ones, or fix any errors, your help is welcome.
 
+## Contact
+If you have any questions, suggestions, or just want to say hello, don't hesitate to get in touch. I'm open to feedback and always willing to assist.
 
+You can reach me at:
 
-## Contacto
+Email: hernandoabella@gmail.com
+Twitter: @hernandoabella
+Website: hernandoabella.com
+Feel free to contact me on any of these platforms! I'm excited to hear your feedback and share ideas.
 
-Si tienes alguna pregunta, sugerencia o simplemente quieres decir hola, no dudes en contactarme. Estoy abierto a comentarios y siempre estoy dispuesto a ayudar.
+If you encounter any issues or have specific suggestions related to asterisk patterns in JavaScript, I would recommend opening an issue in the corresponding repository for more effective tracking.
 
-Puedes encontrarme en:
+Looking forward to hearing from you!
 
-- Correo electrónico: [hernandoabella@gmail.com](mailto:hernandoabella@gmail.com)
-- Twitter: [@hernandoabella](https://twitter.com/hernandoabella)
-- Sitio web: [hernandoabella.com](https://www.hernandoabella.com)
-
-¡No dudes en contactarme en cualquiera de estas plataformas! Estoy emocionado de escuchar tus comentarios y compartir ideas.
-
-Si encuentras algún problema o tienes alguna sugerencia específica relacionada con los patrones de asteriscos en JavaScript, te recomendaría abrir un problema en el repositorio correspondiente para un seguimiento más efectivo.
-
-¡Espero con ansias escuchar de ti!
-
-
-Creado con ❤️ por Hernando Abella 
+Created with ❤️ by Hernando Abella
