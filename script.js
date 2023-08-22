@@ -87,7 +87,7 @@ codeSnippets.forEach(function (snippet) {
     // Eliminar el textarea temporal
     document.body.removeChild(tempTextarea);
 
-    alert("¡Patrón copiado!");
+    alert("Pattern copied!");
   });
 });
 
