@@ -3,29 +3,29 @@
 ### Code:
 
 ```
-function imprimirTrianguloEquilatero(filas) {
-  // Iterar sobre cada fila del triángulo
-  for (let i = 0; i < filas; i++) {
-    let espacios = "";
-    let asteriscos = "";
+function printEquilateralTriangle(rows) {
+  // Iterate over each row of the triangle
+  for (let i = 0; i < rows; i++) {
+    let spaces = "";
+    let stars = "";
 
-    // Agregar espacios en blanco antes de los asteriscos
-    for (let j = 0; j < filas - i - 1; j++) {
-      espacios += " ";
+    // Add white spaces before the stars
+    for (let j = 0; j < rows - i - 1; j++) {
+      spaces += " ";
     }
 
-    // Agregar los asteriscos
+    // Add the stars
     for (let k = 0; k < 2 * i + 1; k++) {
-      asteriscos += "*";
+      stars += "*";
     }
 
-    // Imprimir la fila
-    console.log(espacios + asteriscos);
+    // Print the row
+    console.log(spaces + stars);
   }
 }
 
-// Llamar a la función e indicar el número de filas que deseas en el triángulo
-imprimirTrianguloEquilatero(5);
+// Call the function and specify the number of rows you want in the triangle
+printEquilateralTriangle(5);
 ```
 
 ### Result:
