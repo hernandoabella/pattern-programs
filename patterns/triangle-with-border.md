@@ -3,41 +3,40 @@
 
 ### Code: 
 ```
-function imprimirTrianguloConBorde(filas) {
-  // Imprimir la primera línea con asterisco completo
-  let linea = "";
-  for (let i = 0; i < 2 * filas - 1; i++) {
-    linea += "*";
+function printTriangleWithBorder(rows) {
+  // Print the first line with full asterisks
+  let line = "";
+  for (let i = 0; i < 2 * rows - 1; i++) {
+    line += "*";
   }
-  console.log(linea);
+  console.log(line);
 
-  // Imprimir las filas del triángulo invertido
-  for (let i = filas - 2; i >= 1; i--) {
-    linea = "*"; // Iniciar la línea con asterisco
+  // Print the rows of the inverted triangle
+  for (let i = rows - 2; i >= 1; i--) {
+    line = "*"; // Start the line with an asterisk
 
-    // Construir el contenido de la línea
-    for (let j = 1; j < 2 * filas - 2; j++) {
-      if (j === i || j === 2 * filas - 2 - i) {
-        linea += " "; // Agregar espacio en blanco en los bordes
+    // Build the content of the line
+    for (let j = 1; j < 2 * rows - 2; j++) {
+      if (j === i || j === 2 * rows - 2 - i) {
+        line += " "; // Add a space in the borders
       } else {
-        linea += "*"; // Agregar asterisco en el interior
+        line += "*"; // Add an asterisk in the interior
       }
     }
 
-    linea += "*"; // Agregar asterisco al final de la línea
-    console.log(linea);
+    line += "*"; // Add an asterisk at the end of the line
+    console.log(line);
   }
 
-  // Imprimir la última línea con asterisco completo
-  linea = "";
-  for (let i = 0; i < 2 * filas - 1; i++) {
-    linea += "*";
+  // Print the last line with full asterisks
+  line = "";
+  for (let i = 0; i < 2 * rows - 1; i++) {
+    line += "*";
   }
-  console.log(linea);
+  console.log(line);
 }
 
-imprimirTrianguloConBorde(5);
-
+printTriangleWithBorder(5);
 ```
 
 ### Result:
