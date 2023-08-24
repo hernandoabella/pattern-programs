@@ -78,11 +78,8 @@ code {
   height: 370px;
 }
 
-/* Agrega estilos para el cuadro de diálogo */
 .language-dialog {
-  position: fixed;
-  top: 50px;
-  right: 20px;
+  position: relative;
   color: #000;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -91,7 +88,6 @@ code {
   z-index: 1;
 }
 
-/* Estilos para las opciones */
 .language-option {
   padding: 5px;
   cursor: pointer;
