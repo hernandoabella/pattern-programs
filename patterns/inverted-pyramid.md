@@ -3,23 +3,23 @@
 ### Code:
 
 ```
-function imprimirPiramideInvertida(filas) {
-  // Iterar sobre cada fila de la pirámide invertida
-  for (let i = filas; i >= 1; i--) {
-    let linea = "";
+function printInvertedPyramid(rows) {
+  // Iterate over each row of the inverted pyramid
+  for (let i = rows; i >= 1; i--) {
+    let line = "";
 
-    // Agregar los asteriscos
+    // Add the stars
     for (let j = 1; j <= 2 * i - 1; j++) {
-      linea += "*";
+      line += "*";
     }
 
-    // Imprimir la fila
-    console.log(linea);
+    // Print the row
+    console.log(line);
   }
 }
 
-// Llamar a la función e indicar el número de filas para la pirámide invertida
-imprimirPiramideInvertida(5);
+// Call the function and specify the number of rows for the inverted pyramid
+printInvertedPyramid(5);
 ```
 
 ### Result:
