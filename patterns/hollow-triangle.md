@@ -2,36 +2,36 @@
 
 ### Code: 
 ```
-function imprimirTrianguloHueco(filas) {
-  // Iterar sobre cada fila del triángulo
-  for (let i = 1; i <= filas; i++) {
-    let espacios = "";
-    let asteriscos = "";
+function printHollowTriangle(rows) {
+  // Iterate over each row of the triangle
+  for (let i = 1; i <= rows; i++) {
+    let spaces = "";
+    let stars = "";
 
-    // Agregar espacios en blanco antes de los asteriscos
-    for (let j = 0; j < filas - i; j++) {
-      espacios += " ";
+    // Add white spaces before the stars
+    for (let j = 0; j < rows - i; j++) {
+      spaces += " ";
     }
 
-    // Construir la cadena de asteriscos
-    if (i === 1 || i === filas) {
+    // Build the string of stars
+    if (i === 1 || i === rows) {
       for (let k = 0; k < i * 2 - 1; k++) {
-        asteriscos += "*";
+        stars += "*";
       }
     } else {
-      asteriscos += "*";
+      stars += "*";
       for (let k = 0; k < (i - 2) * 2 + 1; k++) {
-        asteriscos += " ";
+        stars += " ";
       }
-      asteriscos += "*";
+      stars += "*";
     }
 
-    // Imprimir la fila
-    console.log(espacios + asteriscos);
+    // Print the row
+    console.log(spaces + stars);
   }
 }
 
-imprimirTrianguloHueco(5); 
+printHollowTriangle(5);
 ```
 
 ### Result:
