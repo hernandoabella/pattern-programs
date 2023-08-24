@@ -80,14 +80,15 @@ code {
 
 /* Agrega estilos para el cuadro de diálogo */
 .language-dialog {
-  position: absolute;
-  top: 30px;
+  position: fixed;
+  top: 50px;
   right: 20px;
+  color: #000;
   background-color: #fff;
   border: 1px solid #ddd;
-  padding: 10px;
   display: none;
   width: 150px;
+  z-index: 1;
 }
 
 /* Estilos para las opciones */
@@ -97,7 +98,7 @@ code {
 }
 
 .language-option:hover {
-  background-color: #f0f0f0;
+  background-color: #dddada;
 }
 
 .card-btns {
