@@ -2,34 +2,35 @@
 
 ### Code: 
 ```
-function imprimirRombo(filas) {
-  // Imprimir la mitad superior del rombo
-  for (let i = 1; i <= filas; i++) {
-    let linea = "";
-    for (let j = 1; j <= filas - i; j++) {
-      linea += " ";
+function printDiamond(rows) {
+  // Print the upper half of the diamond
+  for (let i = 1; i <= rows; i++) {
+    let line = "";
+    for (let j = 1; j <= rows - i; j++) {
+      line += " ";
     }
     for (let k = 1; k <= 2 * i - 1; k++) {
-      linea += "*";
+      line += "*";
     }
-    console.log(linea);
+    console.log(line);
   }
 
-  // Imprimir la mitad inferior del rombo
-  for (let i = filas - 1; i >= 1; i--) {
-    let linea = "";
-    for (let j = 1; j <= filas - i; j++) {
-      linea += " ";
+  // Print the lower half of the diamond
+  for (let i = rows - 1; i >= 1; i--) {
+    let line = "";
+    for (let j = 1; j <= rows - i; j++) {
+      line += " ";
     }
     for (let k = 1; k <= 2 * i - 1; k++) {
-      linea += "*";
+      line += "*";
     }
-    console.log(linea);
+    console.log(line);
   }
 }
 
-// Llamar a la función e indicar el número de filas para el rombo
-imprimirRombo(5);
+// Call the function and specify the number of rows for the diamond
+printDiamond(5);
+
 ```
 
 ### Result:
