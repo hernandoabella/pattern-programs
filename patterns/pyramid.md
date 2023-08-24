@@ -3,23 +3,23 @@
 ### Code:
 
 ```
-function imprimirPiramide(filas) {
-  // Iterar sobre cada fila de la pirámide
-  for (let i = 1; i <= filas; i++) {
-    let linea = "";
+function printPyramid(rows) {
+  // Iterate over each row of the pyramid
+  for (let i = 1; i <= rows; i++) {
+    let line = "";
 
-    // Agregar los asteriscos
+    // Add the stars
     for (let j = 1; j <= 2 * i - 1; j++) {
-      linea += "*";
+      line += "*";
     }
 
-    // Imprimir la fila
-    console.log(linea);
+    // Print the row
+    console.log(line);
   }
 }
 
-// Llamar a la función e indicar el número de filas para la pirámide
-imprimirPiramide(5);
+// Call the function and specify the number of rows for the pyramid
+printPyramid(5);
 ```
 
 ### Result:
