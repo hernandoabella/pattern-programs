@@ -2,37 +2,36 @@
 
 
 ### Code: 
-function imprimirTrianguloHuecoInvertido(filas) {
-  // Iterar sobre cada fila del triángulo
-  for (let i = filas; i >= 1; i--) {
-    let espacios = "";
-    let asteriscos = "";
+function printInvertedHollowTriangle(rows) {
+  // Iterate over each row of the inverted triangle
+  for (let i = rows; i >= 1; i--) {
+    let spaces = "";
+    let stars = "";
 
-    // Agregar espacios en blanco antes de los asteriscos
-    for (let j = 0; j < filas - i; j++) {
-      espacios += " ";
+    // Add white spaces before the stars
+    for (let j = 0; j < rows - i; j++) {
+      spaces += " ";
     }
 
-    // Construir la cadena de asteriscos
-    if (i === filas || i === 1) {
+    // Build the string of stars
+    if (i === rows || i === 1) {
       for (let k = 0; k < 2 * i - 1; k++) {
-        asteriscos += "*";
+        stars += "*";
       }
     } else {
-      asteriscos += "*";
+      stars += "*";
       for (let k = 0; k < 2 * i - 3; k++) {
-        asteriscos += " ";
+        stars += " ";
       }
-      asteriscos += "*";
+      stars += "*";
     }
 
-    // Imprimir la fila
-    console.log(espacios + asteriscos);
+    // Print the row
+    console.log(spaces + stars);
   }
 }
 
-
-imprimirTrianguloHuecoInvertido(5);
+printInvertedHollowTriangle(5);
 ```
 
 ### Result:
