@@ -3,29 +3,29 @@
 ### Code:
 
 ```
-function imprimirTrianguloInvertido(filas) {
-  // Iterar sobre cada fila del triángulo
-  for (let i = filas; i > 0; i--) {
-    let espacios = "";
-    let asteriscos = "";
+function printInvertedTriangle(rows) {
+  // Iterate over each row of the inverted triangle
+  for (let i = rows; i > 0; i--) {
+    let spaces = "";
+    let stars = "";
 
-    // Agregar espacios en blanco antes de los asteriscos
-    for (let j = 0; j < filas - i; j++) {
-      espacios += " ";
+    // Add white spaces before the stars
+    for (let j = 0; j < rows - i; j++) {
+      spaces += " ";
     }
 
-    // Agregar los asteriscos
+    // Add the stars
     for (let k = 0; k < 2 * i - 1; k++) {
-      asteriscos += "*";
+      stars += "*";
     }
 
-    // Imprimir la fila
-    console.log(espacios + asteriscos);
+    // Print the row
+    console.log(spaces + stars);
   }
 }
 
-// Llamar a la función e indicar el número de filas que deseas en el triángulo invertido
-imprimirTrianguloInvertido(5);
+// Call the function and specify the number of rows for the inverted triangle
+printInvertedTriangle(5);
 ```
 
 ### Result:
