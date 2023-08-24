@@ -3,18 +3,18 @@
 ### Code: 
 
 ```
-function imprimirEscaleraAscendente(filas) {
-  for (let i = 1; i <= filas; i++) {
-    let linea = '';
+function printAscendingLadder(rows) {
+  for (let i = 1; i <= rows; i++) {
+    let line = '';
     for (let j = 1; j <= i; j++) {
-      linea += '*';
+      line += '*';
     }
-    console.log(linea);
+    console.log(line);
   }
 }
 
-// Llamar a la función e indicar el número de filas para la escalera ascendente
-imprimirEscaleraAscendente(5);
+// Call the function and specify the number of rows for the ascending ladder
+printAscendingLadder(5);
 ```
 
 ### Result:
