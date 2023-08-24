@@ -2,18 +2,18 @@
 
 ### Código: 
 ```
-function imprimirEscaleraDescendente(filas) {
-  for (let i = filas; i >= 1; i--) {
-    let linea = '';
+function printDescendingLadder(rows) {
+  for (let i = rows; i >= 1; i--) {
+    let line = '';
     for (let j = 1; j <= i; j++) {
-      linea += '*';
+      line += '*';
     }
-    console.log(linea);
+    console.log(line);
   }
 }
 
-// Llamar a la función e indicar el número de filas para la escalera descendente
-imprimirEscaleraDescendente(5);
+// Call the function and specify the number of rows for the descending ladder
+printDescendingLadder(5);
 ```
 
 ### Resultado:
