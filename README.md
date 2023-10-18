@@ -2,6 +2,8 @@
 
 <p align="center">Programs of Asterisk Patterns in JavaScript<p>
 
+add other programming languages
+
 ## Patterns list ⬇️
 
 1. [Equilateral Triangle](patterns/equilateral-triangle.md)
