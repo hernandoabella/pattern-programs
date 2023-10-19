@@ -2,7 +2,7 @@
 
 <p align="center">Programs of Asterisk Patterns in JavaScript<p>
 
-add other programming languages
+add other programming languages: c/c++, java, python, javascript and more.
 
 ## Patterns list ⬇️
 
