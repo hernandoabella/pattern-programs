@@ -91,6 +91,10 @@ code {
 
 }
 
+.active {
+  background: violet !important;
+}
+
 .menu {
   display: flex;
   gap: 10px;
