@@ -1,429 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Asterisk Patterns</title>
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/monokai.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 
-  </head>
-  <body>
-    <!-- header -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asterisk Patterns</title>
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/monokai.min.css" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 
-    <header>
-      <h1><img class="logo" src="./images/logo-light.png" alt="logo" /></h1>
-      <div class="iconos">
-        <i class="fas fa-moon" onclick="darkMode()"></i>
-        <a
-          rel="noopener"
-          title="Github"
-          href="https://www.github.com/hernandoabella/patrones-de-asteriscos-en-js"
-          target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a id="language-selector" href="#">
-          <i class="fas fa-globe"></i>
-        </a>
-        <div class="language-dialog" id="languageDialog">
-          <div class="language-option" onclick="navigateToLanguage('/')">
-            English
-          </div>
-          <div class="language-option" onclick="navigateToLanguage('/es')">
-            Español
-          </div>
+</head>
+
+<body>
+  <!-- header -->
+
+  <header>
+    <h1><img class="logo" src="./images/logo-light.png" alt="logo" /></h1>
+    <div class="iconos">
+      <i class="fas fa-moon" onclick="darkMode()"></i>
+      <a rel="noopener" title="Github" href="https://www.github.com/hernandoabella/patrones-de-asteriscos-en-js"
+        target="_blank"><i class="fab fa-github"></i></a>
+      <a id="language-selector" href="#">
+        <i class="fas fa-globe"></i>
+      </a>
+      <div class="language-dialog" id="languageDialog">
+        <div class="language-option" onclick="navigateToLanguage('/')">
+          English
+        </div>
+        <div class="language-option" onclick="navigateToLanguage('/es')">
+          Español
         </div>
       </div>
-    </header>
-    <!-- header -->
+    </div>
+  </header>
+  <!-- header -->
 
-    <!-- container -->
-    <div class="container">
-      <div class="card">
-        <h2>Equilateral Triangle</h2>
-        <pre class="codeSnippet" id="codeSnippet">
-    *
-   ***
-  *****
- *******
-*********</pre
-        >
+  <!-- container -->
+  <div class="container">
 
-        <div class="card-btns">
-          <button class="copyButton">
-            <i class="fas fa-copy"></i> Copy code
-          </button>
-
-          <button class="showCodeButton">
-            <i class="fas fa-code"></i> Show code
-          </button>
-        </div>
-        <div class="codigo">
-          <pre>
-            <code>
-function imprimirTrianguloEquilatero(filas) {
-  // Iterar sobre cada fila del triángulo
-  for (let i = 0; i < filas; i++) {
-    let espacios = "";
-    let asteriscos = "";
-
-    // Agregar espacios en blanco antes de los asteriscos
-    for (let j = 0; j < filas - i - 1; j++) {
-      espacios += " ";
-    }
-
-    // Agregar los asteriscos
-    for (let k = 0; k < 2 * i + 1; k++) {
-      asteriscos += "*";
-    }
-
-    // Imprimir la fila
-    console.log(espacios + asteriscos);
-  }
-}
-
-// Llamar a la función e indicar el número de filas que deseas en el triángulo
-imprimirTrianguloEquilatero(5);                              
-            </code>
-          </pre>
-        </div>
-      </div>
-      <div class="card">
-        <h2>Inverted Triangle</h2>
-        <pre class="codeSnippet">
-*********
- *******
-  *****
-   ***
-    *</pre
-        >
-        <div class="card-btns">
-          <button class="copyButton">
-            <i class="fas fa-copy"></i> Copy code
-          </button>
-          <button class="showCodeButton">
-            <i class="fas fa-code"></i> Show code
-          </button>
-        </div>
-        <div class="codigo">
-          <pre>
-          <code>
-function imprimirTrianguloInvertido(filas) {
-  // Iterar sobre cada fila del triángulo
-  for (let i = filas; i > 0; i--) {
-    let espacios = "";
-    let asteriscos = "";
-
-    // Agregar espacios en blanco antes de los asteriscos
-    for (let j = 0; j < filas - i; j++) {
-      espacios += " ";
-    }
-
-    // Agregar los asteriscos
-    for (let k = 0; k < 2 * i - 1; k++) {
-      asteriscos += "*";
-    }
-
-    // Imprimir la fila
-    console.log(espacios + asteriscos);
-  }
-}
-
-// Llamar a la función e indicar el número de filas que deseas en el triángulo invertido
-imprimirTrianguloInvertido(5);                   
-          </code>
-        </pre>
-        </div>
-      </div>
-      <div class="card">
-        <h2>Hollow Triangle</h2>
-        <pre class="codeSnippet">
-    *
-   * *
-  *   *
- *     *
-*********</pre
-        >
-        <div class="card-btns">
-          <button class="copyButton">
-            <i class="fas fa-copy"></i> Copy code
-          </button>
-
-          <button class="showCodeButton">
-            <i class="fas fa-code"></i> Show code
-          </button>
-        </div>
-        <div class="codigo">
-          <pre>
-            <code>
-function imprimirTrianguloHueco(filas) {
-  // Iterar sobre cada fila del triángulo
-  for (let i = 1; i <= filas; i++) {
-    let espacios = "";
-    let asteriscos = "";
-
-    // Agregar espacios en blanco antes de los asteriscos
-    for (let j = 0; j < filas - i; j++) {
-      espacios += " ";
-    }
-
-    // Construir la cadena de asteriscos
-    if (i === 1 || i === filas) {
-      for (let k = 0; k < i * 2 - 1; k++) {
-        asteriscos += "*";
-      }
-    } else {
-      asteriscos += "*";
-      for (let k = 0; k < (i - 2) * 2 + 1; k++) {
-        asteriscos += " ";
-      }
-      asteriscos += "*";
-    }
-
-    // Imprimir la fila
-    console.log(espacios + asteriscos);
-  }
-}
-
-imprimirTrianguloHueco(5);               
-            </code>
-          </pre>
-        </div>
-      </div>
-      <div class="card">
-        <h2>Inverted Hollow Triangle</h2>
-        <pre class="codeSnippet">
-*********
- *     *
-  *   *
-   * *
-    *</pre
-        >
-        <div class="card-btns">
-          <button class="copyButton">
-            <i class="fas fa-copy"></i> Copy code
-          </button>
-
-          <button class="showCodeButton">
-            <i class="fas fa-code"></i> Show code
-          </button>
-        </div>
-        <div class="codigo">
-          <pre>
-            <code>
-function imprimirTrianguloHueco(filas) {
-  // Iterar sobre cada fila del triángulo
-  for (let i = 1; i <= filas; i++) {
-    let espacios = "";
-    let asteriscos = "";
-
-    // Agregar espacios en blanco antes de los asteriscos
-    for (let j = 0; j < filas - i; j++) {
-      espacios += " ";
-    }
-
-    // Construir la cadena de asteriscos
-    if (i === 1 || i === filas) {
-      for (let k = 0; k < i * 2 - 1; k++) {
-        asteriscos += "*";
-      }
-    } else {
-      asteriscos += "*";
-      for (let k = 0; k < (i - 2) * 2 + 1; k++) {
-        asteriscos += " ";
-      }
-      asteriscos += "*";
-    }
-
-    // Imprimir la fila
-    console.log(espacios + asteriscos);
-  }
-}
-
-imprimirTrianguloHueco(5);               
-            </code>
-          </pre>
-        </div>
-      </div>
-      <div class="card">
-        <h2>Triangle with Border</h2>
-        <pre class="codeSnippet">
-*********
-*** * ***
-** *** **
-* ***** *
-*********</pre
-        >
-        <div class="card-btns">
-          <button class="copyButton">
-            <i class="fas fa-copy"></i> Copy code
-          </button>
-
-          <button class="showCodeButton">
-            <i class="fas fa-code"></i> Show code
-          </button>
-        </div>
-        <div class="codigo">
-          <pre>
-            <code>
-function imprimirTrianguloConBorde(filas) {
-  // Imprimir la primera línea con asterisco completo
-  let linea = "";
-  for (let i = 0; i < 2 * filas - 1; i++) {
-    linea += "*";
-  }
-  console.log(linea);
-
-  // Imprimir las filas del triángulo invertido
-  for (let i = filas - 2; i >= 1; i--) {
-    linea = "*"; // Iniciar la línea con asterisco
-
-    // Construir el contenido de la línea
-    for (let j = 1; j < 2 * filas - 2; j++) {
-      if (j === i || j === 2 * filas - 2 - i) {
-        linea += " "; // Agregar espacio en blanco en los bordes
-      } else {
-        linea += "*"; // Agregar asterisco en el interior
-      }
-    }
-
-    linea += "*"; // Agregar asterisco al final de la línea
-    console.log(linea);
-  }
-
-  // Imprimir la última línea con asterisco completo
-  linea = "";
-  for (let i = 0; i < 2 * filas - 1; i++) {
-    linea += "*";
-  }
-  console.log(linea);
-}
-
-imprimirTrianguloConBorde(5);             
-            </code>
-          </pre>
-        </div>
-      </div>
-      <div class="card">
-        <h2>Simple Pyramid</h2>
-        <pre class="codeSnippet">
+    <div class="card">
+      <h2>Simple Pyramid</h2>
+      <pre class="codeSnippet">
 *
 ***
 *****
 *******
-*********</pre
-        >
-        <div class="card-btns">
-          <button class="copyButton">
-            <i class="fas fa-copy"></i> Copy code
-          </button>
+*********</pre>
+      <div class="card-btns">
+        <button class="copyButton">
+          <i class="fas fa-copy"></i> Copy code
+        </button>
 
-          <button class="showCodeButton">
-            <i class="fas fa-code"></i> Show code
-          </button>
-        </div>
-        <div class="codigo">
-          <pre>
-            <code>
-function imprimirPiramide(filas) {
-  // Iterar sobre cada fila de la pirámide
-  for (let i = 1; i <= filas; i++) {
-    let linea = "";
-
-    // Agregar los asteriscos
-    for (let j = 1; j <= 2 * i - 1; j++) {
-      linea += "*";
-    }
-
-    // Imprimir la fila
-    console.log(linea);
-  }
-}
-
-// Llamar a la función e indicar el número de filas para la pirámide
-imprimirPiramide(5);            
-            </code>
-          </pre>
-        </div>
+        <button class="showCodeButton">
+          <i class="fas fa-code"></i> Show code
+        </button>
       </div>
-      <div class="card">
-        <h2>Inverted Pyramid</h2>
-        <pre class="codeSnippet">
-*********
-*******
-*****
-***
-*</pre
-        >
-        <div class="card-btns">
-          <button class="copyButton">
-            <i class="fas fa-copy"></i> Copy code
-          </button>
-
-          <button class="showCodeButton">
-            <i class="fas fa-code"></i> Show code
-          </button>
-        </div>
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
             <code>
-function imprimirPiramideInvertida(filas) {
-  // Iterar sobre cada fila de la pirámide invertida
-  for (let i = filas; i >= 1; i--) {
-    let linea = "";
-
-    // Agregar los asteriscos
-    for (let j = 1; j <= 2 * i - 1; j++) {
-      linea += "*";
-    }
-
-    // Imprimir la fila
-    console.log(linea);
-  }
-}
-
-// Llamar a la función e indicar el número de filas para la pirámide invertida
-imprimirPiramideInvertida(5);            
+code1          
             </code>
           </pre>
-        </div>
       </div>
     </div>
-    <!-- container -->
 
-    <!-- footer -->
-    <footer>
-      <p>
-        Creado con ❤️ por
-        <a href="https://github.com/hernandoabella">Hernando Abella</a>
-      </p>
-    </footer>
-    <!-- footer -->
-    <button onclick="topFunction()" id="myBtn" title="Ir arriba">
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
-    <script src="./script.js"></script>
-  </body>
+  </div>
+  <!-- container -->
+
+  <!-- footer -->
+  <footer>
+    <p>
+      Made with ❤️ by
+      <a href="https://github.com/hernandoabella">Hernando Abella</a>
+    </p>
+  </footer>
+  <!-- footer -->
+  <button onclick="topFunction()" id="myBtn" title="Ir arriba">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script src="./script.js"></script>
+</body>
+
 </html>
