@@ -33,10 +33,10 @@ showCodeButtons.forEach(function (button) {
     var codigoContainer = button.parentNode.nextElementSibling;
     if (codigoContainer.style.display === "block") {
       codigoContainer.style.display = "none";
-      button.innerHTML = '<i class="fas fa-code"></i> Mostrar código';
+      button.innerHTML = '<i class="fas fa-code"></i> Show code';
     } else {
       codigoContainer.style.display = "block";
-      button.innerHTML = '<i class="fas fa-code"></i> Ocultar código';
+      button.innerHTML = '<i class="fas fa-code"></i> Hide code';
     }
   });
 });
