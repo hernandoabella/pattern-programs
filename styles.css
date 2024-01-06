@@ -32,20 +32,16 @@ header {
 
 .card {
   padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  border: 1px solid #dedede;
   position: relative;
   border-radius: 12px;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 12px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
-}
-
-.card:hover {
-  background: #e68cff !important;
 
 }
+
 
 .dark-mode .card:hover {
   background: #9540ac !important;
@@ -70,22 +66,14 @@ h2 {
   margin-bottom: 20px;
 }
 
-
-.card-btns {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-}
-
 .codeSnippet {
   background: #dedede;
-  margin: auto auto;
-  width: 138px;
   display: block;
   border-radius: 15px;
   padding: 20px;
   font-size: 20px;
   cursor: pointer;
+  width: 100%;
 }
 
 .codeSnippet:active {
@@ -99,36 +87,13 @@ h2 {
 .copyButton {
   background: #b553d0;
   color: #fff;
-  padding: 10px;
   cursor: pointer;
 }
 
-.copyButton:hover {
-  opacity: 0.8;
-}
-
-.showCodeButton {
-  background: #333;
-  color: #fff;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.showCodeButton:hover {
-  opacity: 0.8;
-}
 
 footer {
   padding: 20px;
   text-align: center;
-}
-
-
-.codeSnippet {
-  font-family: monospace;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  position: relative;
 }
 
 @media screen and (max-width: 768px) {
