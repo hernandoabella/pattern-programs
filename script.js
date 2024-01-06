@@ -1,140 +1,141 @@
 document.addEventListener("DOMContentLoaded", function () {
   hljs.highlightAll();
-  applyDarkMode();
-  setupShowCodeButtons();
-  setupScrollToTopButton();
-  generateCards();
-});
-
-function applyDarkMode() {
   var darkMode = localStorage.getItem("darkMode");
-  var element = document.body;
 
   if (darkMode === "enabled") {
-    element.classList.add("dark-mode");
+    document.body.classList.add("dark-mode");
     cambiarLogo("logo-dark.png");
   }
-}
+});
 
-function setupShowCodeButtons() {
-  var showCodeButtons = document.querySelectorAll(".showCodeButton");
+function darkMode() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
 
-  showCodeButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      toggleCodeVisibility(button);
-    });
-  });
-}
-
-function toggleCodeVisibility(button) {
-  var codigoContainer = button.parentNode.nextElementSibling;
-
-  if (codigoContainer.style.display === "block") {
-    codigoContainer.style.display = "none";
-    button.innerHTML = '<i class="fas fa-code"></i> Show code';
+  if (element.classList.contains("dark-mode")) {
+    localStorage.setItem("darkMode", "enabled");
+    cambiarLogo("logo-dark.png");
   } else {
-    codigoContainer.style.display = "block";
-    button.innerHTML = '<i class="fas fa-code"></i> Hide code';
+    localStorage.setItem("darkMode", "disabled");
+    cambiarLogo("logo-light.png");
   }
 }
 
-function setupScrollToTopButton() {
-  let mybutton = document.getElementById("myBtn");
+function cambiarLogo(nombreLogo) {
+  var logo = document.querySelector("header img");
+  logo.src = "./images/" + nombreLogo;
+}
 
-  window.onscroll = function () {
-    scrollFunction();
-  };
+var showCodeButtons = document.querySelectorAll(".showCodeButton");
 
-  function scrollFunction() {
-    mybutton.style.display =
-      document.body.scrollTop > 20 || document.documentElement.scrollTop > 20
-        ? "block"
-        : "none";
+showCodeButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    var codigoContainer = button.parentNode.nextElementSibling;
+    if (codigoContainer.style.display === "block") {
+      codigoContainer.style.display = "none";
+      button.innerHTML = '<i class="fas fa-code"></i> Mostrar código';
+    } else {
+      codigoContainer.style.display = "block";
+      button.innerHTML = '<i class="fas fa-code"></i> Ocultar código';
+    }
+  });
+});
+
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
   }
+}
 
-  mybutton.addEventListener("click", function () {
-    topFunction();
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+// Obtener todos los codeSnippets
+var codeSnippets = document.querySelectorAll(".codeSnippet");
+
+// Agregar evento de clic a cada codeSnippet
+codeSnippets.forEach(function (snippet) {
+  snippet.addEventListener("click", function () {
+    // Obtener el código del codeSnippet actual
+    var code = this.innerHTML;
+
+    // Crear un elemento de textarea temporal
+    var tempTextarea = document.createElement("textarea");
+    tempTextarea.value = code;
+    document.body.appendChild(tempTextarea);
+
+    // Seleccionar el contenido del textarea temporal
+    tempTextarea.select();
+    tempTextarea.setSelectionRange(0, 99999); // Para dispositivos móviles
+
+    // Copiar el contenido del textarea al portapapeles
+    document.execCommand("copy");
+
+    // Eliminar el textarea temporal
+    document.body.removeChild(tempTextarea);
+
+    alert("Pattern copied!");
+  });
+});
+
+// Obtener todos los elementos con la clase 'copyButton'
+const copyButtons = document.querySelectorAll(".copyButton");
+
+// Iterar sobre cada botón de copiar
+copyButtons.forEach((button) => {
+  // Agregar un evento 'click' a cada botón
+  button.addEventListener("click", () => {
+    // Obtener el elemento de código asociado al botón actual
+    const codeElement =
+      button.parentNode.nextElementSibling.querySelector("code");
+
+    // Crear un área de texto temporal
+    const tempTextarea = document.createElement("textarea");
+    tempTextarea.value = codeElement.textContent;
+    document.body.appendChild(tempTextarea);
+
+    // Seleccionar y copiar el contenido del área de texto
+    tempTextarea.select();
+    document.execCommand("copy");
+
+    // Eliminar el área de texto temporal
+    document.body.removeChild(tempTextarea);
+
+    // Cambiar el texto del botón al copiarse
+    button.innerHTML = '<i class="fas fa-check"></i> Copied';
+
+    // Restaurar el texto del botón después de 2 segundos
+    setTimeout(() => {
+      button.innerHTML = '<i class="fas fa-copy"></i> Copy code';
+    }, 2000);
   });
 
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+  
+
+});
+
+// Muestra u oculta el cuadro de diálogo al hacer clic en el icono
+document.getElementById("language-selector").addEventListener("click", function () {
+  var dialog = document.getElementById("languageDialog");
+  dialog.style.display = dialog.style.display === "block" ? "none" : "block";
+});
+
+// Redirige a la ruta seleccionada en el cuadro de diálogo
+function navigateToLanguage(selectedValue) {
+  if (selectedValue) {
+    window.location.href = selectedValue;
   }
-}
-
-function generateCards() {
-  const cardData = [
-    { title: "Pattern One", pattern: "*\n***\n*****\n*******\n*********" },
-    { title: "Pattern Two", pattern: "*\n**\n***\n****\n*****" },
-    { title: "Pattern Three", pattern: "*\n***\n*****\n*******\n*********" },
-    // Add more card data as needed
-  ];
-
-  const container = document.getElementById("cards-container");
-
-  cardData.forEach((data) => {
-    const card = generateCard(data.title, data.pattern);
-    container.appendChild(card);
-  });
-}
-
-function generateCard(title, pattern) {
-  const card = document.createElement("div");
-  card.className = "card";
-
-  const titleElement = document.createElement("h2");
-  titleElement.textContent = title;
-
-  const patternElement = document.createElement("pre");
-  patternElement.className = "codeSnippet";
-  patternElement.textContent = pattern;
-
-  const buttonsContainer = document.createElement("div");
-  buttonsContainer.className = "card-btns";
-
-  const copyButton = document.createElement("button");
-  copyButton.className = "copyButton";
-  copyButton.innerHTML = '<i class="fas fa-copy"></i> Copy code';
-
-  const showCodeButton = document.createElement("button");
-  showCodeButton.className = "showCodeButton";
-  showCodeButton.innerHTML = '<i class="fas fa-code"></i> Show code';
-
-  const codigoContainer = document.createElement("div");
-  codigoContainer.className = "codigo";
-  codigoContainer.style.display = "none";
-
-  const codeElement = document.createElement("pre");
-  codeElement.innerHTML = `<code>${title}</code>`;
-
-  copyButton.addEventListener("click", function () {
-    copyCodeToClipboard(patternElement.textContent);
-  });
-
-  // Appending elements to the card
-  buttonsContainer.appendChild(copyButton);
-  buttonsContainer.appendChild(showCodeButton);
-  codigoContainer.appendChild(codeElement);
-
-  card.appendChild(titleElement);
-  card.appendChild(patternElement);
-  card.appendChild(buttonsContainer);
-  card.appendChild(codigoContainer);
-
-  return card;
-}
-
-function copyCodeToClipboard(code) {
-  const tempTextarea = document.createElement("textarea");
-  tempTextarea.value = code;
-  document.body.appendChild(tempTextarea);
-
-  tempTextarea.select();
-  tempTextarea.setSelectionRange(0, 99999);
-
-  document.execCommand("copy");
-
-  document.body.removeChild(tempTextarea);
-
-  alert("Pattern copied!");
 }
