@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (darkMode === "enabled") {
     document.body.classList.add("dark-mode");
-    cambiarLogo("logo-dark.png");
   }
 });
 
@@ -14,10 +13,8 @@ function darkMode() {
 
   if (element.classList.contains("dark-mode")) {
     localStorage.setItem("darkMode", "enabled");
-    cambiarLogo("logo-dark.png");
   } else {
     localStorage.setItem("darkMode", "disabled");
-    cambiarLogo("logo-light.png");
   }
 }
 
@@ -33,10 +30,8 @@ showCodeButtons.forEach(function (button) {
     var codigoContainer = button.parentNode.nextElementSibling;
     if (codigoContainer.style.display === "block") {
       codigoContainer.style.display = "none";
-      button.innerHTML = '<i class="fas fa-code"></i> Show code';
     } else {
       codigoContainer.style.display = "block";
-      button.innerHTML = '<i class="fas fa-code"></i> Hide code';
     }
   });
 });
@@ -115,15 +110,15 @@ copyButtons.forEach((button) => {
     document.body.removeChild(tempTextarea);
 
     // Cambiar el texto del botón al copiarse
-    button.innerHTML = '<i class="fas fa-check"></i> Copied';
+    button.innerHTML = '<i class="fas fa-check"></i> ';
 
     // Restaurar el texto del botón después de 2 segundos
     setTimeout(() => {
-      button.innerHTML = '<i class="fas fa-copy"></i> Copy code';
+      button.innerHTML = '<i class="fas fa-copy"></i> ';
     }, 2000);
   });
 
-  
+
 
 });
 
