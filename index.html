@@ -13,8 +13,8 @@
   <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css" />
   <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css" />
   <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-
 </head>
 
 <body>
@@ -23,15 +23,22 @@
   <header>
     <h1><img class="logo" src="./images/logo-light.png" alt="logo" /></h1>
     <div class="iconos">
-      <i class="fas fa-moon" onclick="darkMode()"></i>
+      <!-- <i class="fas fa-moon" onclick="darkMode()"></i> -->
       <a rel="noopener" title="Github" href="https://www.github.com/hernandoabella/astik" target="_blank"><i
           class="fab fa-github"></i></a>
     </div>
   </header>
   <!-- header -->
 
+  <!-- menu -->
+  <div class="menu">
+    <div data-language="javascript"><i class="devicon-javascript-plain"></i></div>
+    <div data-language="typescript"><i class="devicon-typescript-plain"></i></div>
+    <div data-language="python"><i class="devicon-python-plain"></i></div>
+  </div>
+  <!-- menu -->
   <!-- container -->
-  <div class="container">
+  <div class="container" id="cards-container">
     <div class="card">
       <h2>Pattern one</h2>
       <pre class="codeSnippet">
@@ -40,6 +47,11 @@
 *****
 *******
 *********</pre>
+      <div class="btn-container">
+        <button class="copyButton">
+          <i class="fas fa-copy"></i>
+        </button>
+      </div>
       <div class="codigo">
         <pre>
             <code>
