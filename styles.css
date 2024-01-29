@@ -32,6 +32,11 @@ header {
   border-radius: 12px;
 }
 
+.card-title {
+  padding: 10px;
+  text-align: center;
+}
+
 code {
   border: 1px solid #e0dfdf;
   border-radius: 12px;
@@ -45,6 +50,7 @@ code {
   cursor: pointer;
   width: 100%;
   border: 1px solid #e0dfdf;
+  background: #fff;
 }
 
 .pattern:active {
