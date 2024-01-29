@@ -7,10 +7,6 @@
   scroll-behavior: smooth;
 }
 
-body.dark-mode {
-  background: rgb(107, 101, 101);
-}
-
 body {
   font-family: 'Inter', sans-serif;
 }
@@ -37,23 +33,6 @@ header {
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
-.dark-mode .card:hover {
-  background: #9540ac !important;
-  z-index: 1;
-  transform: skew(-3deg, -3deg);
-}
-
-.dark-mode .card {
-  background: #4b4b4b;
-}
-
-.iconos i {
-  font-size: 20px;
-  padding: 10px;
-  color: #cb6ce6;
-  cursor: pointer;
-}
-
 code {
   border: 1px solid #e0dfdf;
   border-radius: 12px;
@@ -67,7 +46,6 @@ code {
   cursor: pointer;
   width: 100%;
   border: 1px solid #e0dfdf;
-  background: red;
 }
 
 .pattern:active {
