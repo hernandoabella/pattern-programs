@@ -19,6 +19,11 @@ header {
   padding: 20px;
 }
 
+.fa-github {
+  color: #333;
+  font-size: 1.3em;
+}
+
 .container {
   display: flex;
   gap: 20px;
@@ -40,6 +45,24 @@ header {
 code {
   border: 1px solid #e0dfdf;
   border-radius: 12px;
+}
+
+.copyButton {
+  padding: 10px;
+  border: 1px solid #e0dfdf;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  margin-top: 15px;
+}
+
+.copyButton:hover {
+  background: #AA53C2;
+  color: #fff;
+}
+
+.copyButton:active {
+  transform: scale(.9);
 }
 
 .pattern {
