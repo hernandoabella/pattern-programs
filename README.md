@@ -1,5 +1,5 @@
 <div align="center"><img title="logo" alt="logo" src="/images/logo-light.png"></div>
-
+<br/>
 <p>Pattern programs are coding exercises where specific patterns or shapes are printed using loops and conditional statements. Pattern programs involve printing different patterns on the console, usually made up of stars, spaces, numbers, or other symbols.<p>
 
 The patterns are supported on: c, c#, c++ java and more. 
