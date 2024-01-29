@@ -22,6 +22,26 @@ header {
 .fa-github {
   color: #333;
   font-size: 1.3em;
+  transition: .3s;
+}
+
+.fa-github:hover {
+  color: #CB6CE6;
+}
+
+.language-selector {
+  text-align: center;
+  padding: 10px;
+  background: #CB6CE6;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+
+.language-selector div {
+  background: #fff;
+  padding: 10px;
+  border-radius: 25px;
 }
 
 .container {
@@ -58,7 +78,7 @@ code {
 }
 
 .copyButton:hover {
-  background: #AA53C2;
+  background: #CB6CE6;
   color: #fff;
 }
 
@@ -89,4 +109,8 @@ footer {
 
 footer a {
   text-decoration: none;
+}
+
+footer span {
+  color: #CB6CE6;
 }
