@@ -54,6 +54,7 @@ code {
   cursor: pointer;
   position: relative;
   margin-top: 15px;
+  transition: .3s;
 }
 
 .copyButton:hover {
