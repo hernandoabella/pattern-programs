@@ -30,7 +30,6 @@ header {
   padding: 10px;
   position: relative;
   border-radius: 12px;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 code {
@@ -50,6 +49,7 @@ code {
 
 .pattern:active {
   transform: scale(0.9);
+  opacity: .8;
 }
 
 .btn-container {
