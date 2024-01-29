@@ -54,18 +54,12 @@ header {
   cursor: pointer;
 }
 
-h2 {
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
 code {
   border: 1px solid #e0dfdf;
   border-radius: 12px;
 }
 
-.codeSnippet {
+.pattern {
   display: block;
   border-radius: 15px;
   padding: 10px;
@@ -73,14 +67,11 @@ code {
   cursor: pointer;
   width: 100%;
   border: 1px solid #e0dfdf;
+  background: red;
 }
 
-.codeSnippet:active {
+.pattern:active {
   transform: scale(0.9);
-}
-
-.dark-mode .codeSnippet {
-  background: #272822;
 }
 
 .btn-container {
