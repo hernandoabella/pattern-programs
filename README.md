@@ -15,9 +15,9 @@ If you have any questions, or suggestions, or just want to say hello, don't hesi
 
 You can reach me at:
 
-Email: hernandoabella@gmail.com
-Twitter: @hernandoabella
-Website: hernandoabella.com
+**Email:** hernandoabella@gmail.com </br>
+**Twitter:** @hernandoabella </br>
+**Website:** hernandoabella.com </br>
 
 Feel free to contact me on any of these platforms! I'm excited to hear your feedback and share ideas.
 
