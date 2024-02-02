@@ -3,7 +3,7 @@
 <p>Pattern programs are coding exercises where specific patterns or shapes are printed using loops and conditional statements. Pattern programs involve printing different patterns on the console, usually made up of stars, spaces, numbers, or other symbols.<p>
 
 ## Supported languages:
-The patterns are supported on: c, c#, c++ java and more. 
+The patterns are supported on: C, C++, C#, Java, JavaScript, and more. 
 
 ## Patterns available: ⬇️
 
