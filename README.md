@@ -14,7 +14,4 @@
 - Go [working on]
 - Ruby [working on] 
 
-## Contribution
-Thank you for considering contributing to Asterisk! If you would like to add new patterns, improve existing ones, or fix any errors, your help is welcome.
-
 Created with ❤️ by Hernando Abella
