@@ -44,34 +44,25 @@ print_pyramid(5)
 
 const Home: React.FC = () => {
   const [currentLanguage, setCurrentLanguage] = useState("Python");
-  const [isClipboardAvailable, setIsClipboardAvailable] = useState(false);
-  const [copied, setCopied] = useState<{ [key: number]: boolean }>({});
-
-  useEffect(() => {
-    if (typeof navigator !== "undefined" && navigator.clipboard) {
-      setIsClipboardAvailable(true);
-    }
-  }, []);
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
   const handleChangeLanguage = (language: string) => {
     setCurrentLanguage(language);
   };
 
-  const handleCopyCode = (code: string, index: number) => {
-    if (isClipboardAvailable) {
-      navigator.clipboard
-        .writeText(code)
-        .then(() => {
-          setCopied((prev) => ({ ...prev, [index]: true }));
-          setTimeout(() => setCopied((prev) => ({ ...prev, [index]: false })), 2000);
-        })
-        .catch((err) => {
-          console.error("Error al copiar el código: ", err);
-        });
-    } else {
-      console.error("Clipboard API no es compatible con este navegador.");
+  const handleCopyCode = async (code: string, index: number) => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopiedIndex(index);
+      setTimeout(() => setCopiedIndex(null), 2000);
+    } catch (err) {
+      console.error("Error al copiar el código: ", err);
     }
   };
+
+  useEffect(() => {
+    hljs.highlightAll();
+  }, [currentLanguage]);
 
   return (
     <div className="flex flex-col items-center justify-center bg-gray-100 p-6">
@@ -121,8 +112,8 @@ const Home: React.FC = () => {
                       onClick={() => handleCopyCode(code.code, index)}
                       className="absolute top-0 right-0 bg-gray-200 text-gray-700 px-2 py-1 text-xs rounded-md flex items-center"
                     >
-                      {copied[index] ? <FaCheck /> : <FaClipboard />}{" "}
-                      <span className="ml-1">{copied[index] ? "Copied!" : "Copy Code"}</span>
+                      {copiedIndex === index ? <FaCheck /> : <FaClipboard />}{" "}
+                      <span className="ml-1">{copiedIndex === index ? "Copied!" : "Copy Code"}</span>
                     </button>
                   </div>
                 ))}
