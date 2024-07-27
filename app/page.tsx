@@ -37,6 +37,10 @@ def print_pyramid(n):
 print_pyramid(5)
         `,
       },
+      {
+        language: "JavaScript",
+        code: `...`,
+      },
     ],
   },
   // Agregar más patrones y lenguajes aquí según sea necesario
