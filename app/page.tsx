@@ -1,6 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import hljs from "highlight.js";
+import "highlight.js/styles/github.css"; // Puedes cambiar el tema según tus preferencias
+import { FaClipboard, FaCheck } from "react-icons/fa";
 
 interface LanguageCode {
   language: string;
@@ -41,14 +44,33 @@ print_pyramid(5)
 
 const Home: React.FC = () => {
   const [currentLanguage, setCurrentLanguage] = useState("Python");
+  const [isClipboardAvailable, setIsClipboardAvailable] = useState(false);
+  const [copied, setCopied] = useState<{ [key: number]: boolean }>({});
+
+  useEffect(() => {
+    if (typeof navigator !== "undefined" && navigator.clipboard) {
+      setIsClipboardAvailable(true);
+    }
+  }, []);
 
   const handleChangeLanguage = (language: string) => {
     setCurrentLanguage(language);
   };
 
-  const handleCopyCode = (code: string) => {
-    navigator.clipboard.writeText(code);
-    alert("Código copiado!");
+  const handleCopyCode = (code: string, index: number) => {
+    if (isClipboardAvailable) {
+      navigator.clipboard
+        .writeText(code)
+        .then(() => {
+          setCopied((prev) => ({ ...prev, [index]: true }));
+          setTimeout(() => setCopied((prev) => ({ ...prev, [index]: false })), 2000);
+        })
+        .catch((err) => {
+          console.error("Error al copiar el código: ", err);
+        });
+    } else {
+      console.error("Clipboard API no es compatible con este navegador.");
+    }
   };
 
   return (
@@ -57,9 +79,7 @@ const Home: React.FC = () => {
         <button
           onClick={() => handleChangeLanguage("Python")}
           className={`${
-            currentLanguage === "Python"
-              ? "bg-blue-500 text-white"
-              : "bg-gray-200 text-gray-700"
+            currentLanguage === "Python" ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-700"
           } font-semibold py-2 px-4 mx-2 rounded`}
         >
           Python
@@ -78,30 +98,31 @@ const Home: React.FC = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-6xl">
         {patterns.map((pattern, index) => (
-          <div
-            key={index}
-            className="rounded overflow-hidden shadow-lg bg-white"
-          >
+          <div key={index} className="rounded overflow-hidden shadow-lg bg-white">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">{pattern.title}</div>
-              <pre className="whitespace-pre-wrap text-gray-700 text-base">
-                {pattern.pattern}
-              </pre>
-              <div className="font-bold text-xl mb-2">
-                {currentLanguage} Code
-              </div>
+              <pre className="whitespace-pre-wrap text-gray-700 text-base">{pattern.pattern}</pre>
+              <div className="font-bold text-xl mb-2">{currentLanguage} Code</div>
               {pattern.codes
                 .filter((code) => code.language === currentLanguage)
                 .map((code, codeIndex) => (
                   <div key={codeIndex} className="relative">
-                    <pre className="whitespace-pre-wrap text-gray-700 text-base">
-                      {code.code.trim()}
+                    <pre>
+                      <code
+                        className={`language-${currentLanguage.toLowerCase()}`}
+                        dangerouslySetInnerHTML={{
+                          __html: hljs.highlight(code.code.trim(), {
+                            language: currentLanguage.toLowerCase(),
+                          }).value,
+                        }}
+                      />
                     </pre>
                     <button
-                      onClick={() => handleCopyCode(code.code)}
-                      className="absolute top-0 right-0 bg-gray-200 text-gray-700 px-2 py-1 text-xs rounded-md"
+                      onClick={() => handleCopyCode(code.code, index)}
+                      className="absolute top-0 right-0 bg-gray-200 text-gray-700 px-2 py-1 text-xs rounded-md flex items-center"
                     >
-                      Copy Code
+                      {copied[index] ? <FaCheck /> : <FaClipboard />}{" "}
+                      <span className="ml-1">{copied[index] ? "Copied!" : "Copy Code"}</span>
                     </button>
                   </div>
                 ))}
@@ -109,7 +130,6 @@ const Home: React.FC = () => {
           </div>
         ))}
       </div>
-      
     </div>
   );
 };
