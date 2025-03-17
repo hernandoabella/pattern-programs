@@ -16,8 +16,8 @@
 ## Grab your copy:
 | Book | Amazon | Gumroad (Digital Download) |
 |-|-|-|
-| [Python](#) | [https://www.amazon.com/-/es/Hernando-Abella/dp/B0DJYCQ3J4](https://www.amazon.com/-/es/Hernando-Abella/dp/B0DJYCQ3J4) | [hernandoabella.gumroad.com/l/bjhjbm](hernandoabella.gumroad.com/l/bjhjbm) |
-| [JavaScript](#) | [https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CTYK7NFR/](https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CTYK7NFR/) | [hernandoabella.gumroad.com/l/ddnpsp](hernandoabella.gumroad.com/l/ddnpsp) |
-| [C](#) | [https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CTPZ6SVD](https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CTPZ6SVD) | [hernandoabella.gumroad.com/l/odrmd](hernandoabella.gumroad.com/l/odrmd) |
+| [Python](#) | [https://www.amazon.com/-/es/Hernando-Abella/dp/B0DJYCQ3J4](https://www.amazon.com/-/es/Hernando-Abella/dp/B0DJYCQ3J4) | [https://hernandoabella.gumroad.com/l/bjhjbm](https://hernandoabella.gumroad.com/l/bjhjbm) |
+| [JavaScript](#) | [https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CTYK7NFR/](https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CTYK7NFR/) | [https://hernandoabella.gumroad.com/l/ddnpsp](https://hernandoabella.gumroad.com/l/ddnpsp) |
+| [C](#) | [https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CTPZ6SVD](https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CTPZ6SVD) | [https://hernandoabella.gumroad.com/l/odrmd](https://hernandoabella.gumroad.com/l/odrmd) |
 
 Created with ❤️ by Hernando Abella
