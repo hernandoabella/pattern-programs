@@ -1,6 +1,8 @@
 # 150+ Python Pattern Programs
 
-Pattern 1
+### Pattern 1
+
+```
 # *****
 # *****
 # *****
@@ -11,8 +13,9 @@ for i in range(1, 6):
     for j in range(1, 6):
         print("*", end="")  # put any character
     print()
+```
  
-Pattern 2
+### Pattern 2
 # *
 # **
 # ***
