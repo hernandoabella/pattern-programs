@@ -8,10 +8,10 @@
 - Pattern programs are coding exercises where specific patterns or shapes are printed using loops and conditional statements. 
 - Pattern programs involve printing different patterns on the console, usually made up of stars, spaces, numbers, or other symbols.
 
-## Patterns by language
-- [Python Patterns](#)
-- [JavaScript Patterns](#)
-- [C Patterns](#)
+## Select your language:
+- [Python Patterns](./python-patterns.md)
+- [JavaScript Patterns](./javascript-patterns.md)
+- [C Patterns](./c-patterns.md)
 
 ## Grab your copy:
 | Book | Amazon | Gumroad (Digital Download) |
