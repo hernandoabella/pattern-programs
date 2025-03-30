@@ -1,6 +1,8 @@
 <div align="center"><img title="logo" alt="logo" src="https://github.com/user-attachments/assets/9827ae04-a874-4afd-8189-3efe899a7cb6"></div>
 
-### <p align="center">Asterisk is a *pattern program* collection used to practice code by making awesome geometrical figures.</p>
+<br/>
+
+Asterisk is a **pattern program** collection used to practice code by making awesome geometrical figures.
 
 <br/>
 
