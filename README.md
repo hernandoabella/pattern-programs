@@ -1,8 +1,6 @@
 
 ![GitHub Banners (2)](https://github.com/user-attachments/assets/17e30a71-e417-4ca4-a9b4-311d7794bef9)
 
-<br/>
-
 ### About
 Pattern Programs is a collection used to practice code by making awesome geometrical figures.
 
