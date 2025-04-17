@@ -1,4 +1,4 @@
-# 150+ Python Pattern Programs
+# Python Pattern Programs
 
 ### Pattern 1
 
