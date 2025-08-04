@@ -1,12 +1,14 @@
 # 150+ C Pattern Programs
 
-Pattern 1
-// *****
-// *****
-// *****
-// *****
-// *****
-
+### Pattern 1
+```
+*****
+*****
+*****
+*****
+*****
+```
+```c
 #include <stdio.h>
 
 int main()
@@ -23,7 +25,8 @@ int main()
     }
     return 0;
 }
- 
+```
+
 Pattern 2
 // *
 // **
