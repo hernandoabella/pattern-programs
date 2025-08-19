@@ -53,12 +53,7 @@ int main()
 ```
  
 ## Pattern 3
-// *****
-// ****
-// ***
-// **
-// *
-
+```c
 #include <stdio.h>
 
 int main()
@@ -75,14 +70,16 @@ int main()
     }
     return 0;
 }
- 
-Pattern 4
-//     *
-//    **
-//   ***
-//  ****
-// *****
 
+// *****
+// ****
+// ***
+// **
+// *
+```
+ 
+## Pattern 4
+```c
 #include <stdio.h>
 
 int main()
@@ -106,14 +103,15 @@ int main()
     return 0;
 }
 
- 
-Pattern 5
-// *****
-//  ****
-//   ***
-//    **
 //     *
-
+//    **
+//   ***
+//  ****
+// *****
+```
+ 
+## Pattern 5
+```c
 #include<stdio.h>
 
 int main() 
@@ -137,14 +135,16 @@ int main()
     return 0;
 }
 
- 
-Pattern 6
-
+// *****
+//  ****
+//   ***
+//    **
 //     *
-//    * *
-//   * * *
-//  * * * *
+```
 
+ 
+## Pattern 6
+```c
 #include <stdio.h>
 #include <conio.h>
 int main()
@@ -167,14 +167,15 @@ int main()
     }
     return 0;
 }
- 
-Pattern 7
-// * * * * *
-//  * * * *
-//   * * *
-//    * *
-//     *
 
+//     *
+//    * *
+//   * * *
+//  * * * *
+````
+ 
+## Pattern 7
+```c
 #include <stdio.h>
 
 int main()
@@ -197,15 +198,16 @@ int main()
     }
     return 0;
 }
- 
-Pattern 8
 
+// * * * * *
+//  * * * *
+//   * * *
+//    * *
 //     *
-//    ***
-//   *****
-//  *******
-// *********
-
+```
+ 
+## Pattern 8
+```c
 #include <stdio.h>
 
 int main()
@@ -229,14 +231,17 @@ int main()
         printf("\n");
     }
 }
- 
-Pattern 9
 
-// *********
-//  *******
-//   *****
-//    ***
+
 //     *
+//    ***
+//   *****
+//  *******
+// *********
+```
+ 
+## Pattern 9
+```c
 
 #include <stdio.h>
 
@@ -263,17 +268,16 @@ int main()
     }
     return 0;
 }
+
+// *********
+//  *******
+//   *****
+//    ***
+//     *
+```
  
-Pattern 10
-
-// *
-// **
-// ***
-// ****
-// ***
-// **
-// *
-
+## Pattern 10
+```c
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -291,6 +295,15 @@ int main()
     }
     return 0;
 }
+
+// *
+// **
+// ***
+// ****
+// ***
+// **
+// *
+```
  
 Pattern 11
 //    *
