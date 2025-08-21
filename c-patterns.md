@@ -5663,14 +5663,9 @@ int main()
     return 0;
 }
  
-Pattern 165
+## Pattern 165
 
-// * * * * *
-//       *
-//     *
-//   *
-// * * * * *
-
+```c
 #include <stdio.h>
 
 int main()
@@ -5696,4 +5691,10 @@ int main()
     return 0;
 }
 
+// * * * * *
+//       *
+//     *
+//   *
+// * * * * *
 
+```
