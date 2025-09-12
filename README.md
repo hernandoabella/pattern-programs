@@ -1,12 +1,5 @@
 ![GitHub Banners (8)](https://github.com/user-attachments/assets/650f685f-52fa-41dc-8747-ea5b8325ab42)
 
-### About
-Pattern Programs is a collection used to practice code by making awesome geometrical figures.
-
-### What are pattern programs?
-- Pattern programs are coding exercises where specific patterns or shapes are printed using loops and conditional statements. 
-- Pattern programs involve printing different patterns on the console, usually made up of stars, spaces, numbers, or other symbols.
-
 ## Select your language:
 - [Python Patterns](./python-patterns.md)
 - [JavaScript Patterns](./javascript-patterns.md)
