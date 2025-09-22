@@ -1,6 +1,6 @@
 ![GitHub Banners (8)](https://github.com/user-attachments/assets/650f685f-52fa-41dc-8747-ea5b8325ab42)
 
-## Select your language:
+## Select Language:
 - [Python Patterns](./python-patterns.md)
 - [JavaScript Patterns](./javascript-patterns.md)
 - [C Patterns](./c-patterns.md)
