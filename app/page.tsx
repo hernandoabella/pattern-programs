@@ -66,7 +66,7 @@ const booksData: Book[] = [
   },
 ];
 
-// ─── Patterns Data (simplificado) ───────────────────────────────────────
+// ─── Patterns Data ─────────────────────────────────────────────────────
 
 const patternsData: Record<string, Pattern[]> = {
   javascript: [
@@ -458,7 +458,7 @@ const languages: Language[] = [
   { id: "c", name: "C", icon: <SiC size={16} />, color: "#A8B9CC", syntax: "c" }
 ];
 
-// ─── Simple Components ─────────────────────────────────────────────────
+// ─── Components ─────────────────────────────────────────────────────────
 
 function CopyButton({ code }: { code: string }) {
   const [copied, setCopied] = useState(false);
@@ -580,6 +580,7 @@ function PatternCard({ pattern, onViewCode }: { pattern: Pattern; onViewCode: ()
   );
 }
 
+// BooksSidebar - Con imágenes COMPLETAS (sin recortes)
 function BooksSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   return (
     <>
@@ -595,13 +596,24 @@ function BooksSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
         </div>
         <div className="flex-1 overflow-auto p-3 space-y-3">
           {booksData.map((book) => (
-            <div key={book.id} className="border rounded-lg overflow-hidden">
-              <img src={book.image} alt={book.title} className="w-full h-32 object-cover" />
+            <div key={book.id} className="border rounded-lg overflow-hidden bg-white">
+              {/* Imagen COMPLETA - sin recortar, mostrando la imagen completa */}
+              <div className="w-full bg-gray-100 flex items-center justify-center">
+                <img 
+                  src={book.image} 
+                  alt={book.title} 
+                  className="w-full h-auto object-contain" 
+                />
+              </div>
               <div className="p-2">
-                <h3 className="font-medium text-sm">{book.title}</h3>
-                <p className="text-xs text-gray-500">{book.author}</p>
-                <a href={book.link} target="_blank" rel="noopener noreferrer" 
-                   className="mt-2 block text-center text-xs bg-blue-600 text-white py-1 rounded">
+                <h3 className="font-medium text-sm line-clamp-2">{book.title}</h3>
+                <p className="text-xs text-gray-500 mt-1">{book.author}</p>
+                <a 
+                  href={book.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="mt-2 block text-center text-xs bg-blue-600 text-white py-1.5 rounded hover:bg-blue-700 transition"
+                >
                   Buy on Amazon →
                 </a>
               </div>
