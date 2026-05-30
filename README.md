@@ -1,11 +1,6 @@
 ![GitHub Banners (8)](https://github.com/user-attachments/assets/650f685f-52fa-41dc-8747-ea5b8325ab42)
 <img width="1139" height="622" alt="image" src="https://github.com/user-attachments/assets/ed3839ba-e5b0-4a46-9539-d3599b416dda" />
 
-## Select Language:
-- [Python Patterns](./python-patterns.md)
-- [JavaScript Patterns](./javascript-patterns.md)
-- [C Patterns](./c-patterns.md)
-
 ## Grab your copy:
 | Book | Amazon | Gumroad (Digital Download) |
 |-|-|-|
