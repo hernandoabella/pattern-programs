@@ -45,39 +45,25 @@ interface Book {
 const booksData: Book[] = [
   {
     id: 1,
-    title: "Pattern Programs in C",
+    title: "150+ Python Pattern Programs",
     author: "Hernando Abella",
-    image: "/c-programs.jpg",
-    link: "https://www.amazon.com/dp/B0D442PCLX/"
+    image: "/pattern-1.jpg",
+    link: "https://www.amazon.com/-/es/150-Python-Pattern-Programs-creativity/dp/B0CVNPVTM2"
   },
   {
     id: 2,
-    title: "Pattern Programs in C++",
+    title: "150+ C Pattern Programs",
     author: "Hernando Abella",
-    image: "/cpp-programs.png",
-    link: "https://www.amazon.com/dp/B0CN51HJQQ/"
+    image: "/pattern-3.jpg",
+    link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CTPZ6SVD"
   },
   {
     id: 3,
-    title: "Pattern Programs in Java",
+    title: "150+ JavaScript Pattern Programs",
     author: "Hernando Abella",
-    image: "/java-programs.jpg",
-    link: "https://www.amazon.com/dp/B0CYHZ5QKJ"
+    image: "/pattern-2.jpg",
+    link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CTYK7NFR"
   },
-  {
-    id: 4,
-    title: "Pattern Programs in Python",
-    author: "Hernando Abella",
-    image: "/python-programs.jpg",
-    link: "https://www.amazon.com/dp/B0CXF57XT9"
-  },
-  {
-    id: 5,
-    title: "Pattern Programs in JavaScript",
-    author: "Hernando Abella",
-    image: "/javascript-programs.jpg",
-    link: "https://www.amazon.com/dp/B0D2ZM71J8"
-  }
 ];
 
 // ─── Patterns Data (simplificado) ───────────────────────────────────────
